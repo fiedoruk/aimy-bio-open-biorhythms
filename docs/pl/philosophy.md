@@ -33,7 +33,7 @@ aimy.bio to darmowa aplikacja webowa zbudowana na metodzie opisanej w
   celowo: traktuj „dzień krytyczny" jako sygnał, by zwrócić uwagę, a nie jako przepowiednię.
 - **Nie jest laboratorium do wymyślania algorytmu na nowo.** Matematyka jest kanoniczna, nie
   eksperymentalna. Jest przypięta zestawem testów golden-vector (patrz
-  [`data/README.md`](../data/README.md)) i nie jest „ulepszana" ani nie dryfuje między
+  [`data/README.md`](../../data/README.md)) i nie jest „ulepszana" ani nie dryfuje między
   wydaniami — wierność metodzie źródłowej jest tu celem samym w sobie.
 
 ## Trzy filary

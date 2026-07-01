@@ -28,7 +28,7 @@ The method starts by counting how many days a person has been alive, adjusted by
 correction for birth time:
 
 ```
-daysLived = round( UTCmidnight(targetDate) − UTCmidnight(birthDate) ) / dayMs + correction
+daysAlive = round( UTCmidnight(targetDate) − UTCmidnight(birthDate) ) / dayMs + correction
 ```
 
 where `correction` depends on the birth-time bucket:
