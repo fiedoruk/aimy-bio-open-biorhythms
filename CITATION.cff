@@ -9,6 +9,9 @@ abstract: >-
   dr. Jerzy Sikora.
 type: software
 authors:
+  - family-names: "Fiedoruk"
+    given-names: "Tomasz"
+    website: "https://aimy.bio"
   - name: "aimy.bio"
     website: "https://aimy.bio"
 url: "https://aimy.bio"
