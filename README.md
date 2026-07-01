@@ -2,7 +2,9 @@
 
 > The open, verified engine and specification of dr. Jerzy Sikora's biorhythm method — powering the free app at [aimy.bio](https://aimy.bio).
 
-![golden](https://github.com/fiedoruk/aimy-bio-open-biorhythms/actions/workflows/test.yml/badge.svg)
+![golden](https://github.com/fiedoruk/aimy-bio-open-biorhythms/actions/workflows/test.yml/badge.svg) [![npm version](https://img.shields.io/npm/v/aimy-bio-open-biorhythms?logo=npm&color=cb3837)](https://www.npmjs.com/package/aimy-bio-open-biorhythms) ![license MIT + CC BY 4.0](https://img.shields.io/badge/license-MIT%20%2B%20CC%20BY%204.0-2ea44f)
+
+**Try it — no install:** `npx aimy-bio-open-biorhythms 1990-05-15`
 
 ## What this is
 
