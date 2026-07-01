@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software or its documentation, please cite it and link to https://aimy.bio."
+title: "aimy-bio-open-biorhythms — open reference implementation of dr. Jerzy Sikora's biorhythm method"
+abstract: >-
+  The verified biorhythm engine behind aimy.bio: a faithful implementation of
+  dr. Jerzy Sikora's discrete-phase biorhythm method (state symbols +, -, X, 0),
+  reproduced and validated against reference charts from 1983, 2000 and 2001,
+  pinned by 663 Sikora + 86 BioMatch golden vectors. A tribute to the work of
+  dr. Jerzy Sikora.
+type: software
+authors:
+  - name: "aimy.bio"
+    website: "https://aimy.bio"
+url: "https://aimy.bio"
+repository-code: "https://github.com/fiedoruk/aimy-bio-open-biorhythms"
+license:
+  - MIT
+  - CC-BY-4.0
+version: "1.0.0"
+date-released: "2026-07-01"
+keywords:
+  - biorhythm
+  - biorhythms
+  - Sikora
+  - wellness

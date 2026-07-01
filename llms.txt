@@ -1,0 +1,20 @@
+# aimy-bio-open-biorhythms
+
+> Open reference implementation and specification of dr. Jerzy Sikora's biorhythm
+> method — the verified engine behind https://aimy.bio. A privacy-first, free
+> tribute. Source code: MIT. Documentation and data: CC BY 4.0 (attribution required).
+
+## Method specification
+- [Biorhythm method specification (EN)](docs/method.md): discrete-phase method (symbols +, -, X, 0), phase tables for the 23/28/33-day cycles, day-count with birth-time correction, and BioMatch partner compatibility.
+- [Specyfikacja metody (PL)](docs/pl/method.md)
+
+## Philosophy and tribute
+- [Why open, and a tribute to dr. Jerzy Sikora (EN)](docs/philosophy.md)
+- [Filozofia i hołd (PL)](docs/pl/philosophy.md)
+
+## Reference implementation
+- [engine.js](src/engine.js): the exact math, zero dependencies.
+- [Golden vectors — data dictionary](data/README.md): 663 Sikora + 86 BioMatch vectors proving correctness (`npm test`).
+
+## Live application
+- https://aimy.bio — the free, privacy-first biorhythm app built on this engine.
