@@ -19,7 +19,7 @@ aimy.bio to darmowa aplikacja webowa zbudowana na metodzie opisanej w
   może śledzić wszystkich z jednej przeglądarki;
 - widok rodzinny, by zobaczyć kilka profili obok siebie;
 - BioMatch, wskaźnik zgodności partnerskiej zbudowany na tych samych cyklach;
-- interfejsy w języku polskim i angielskim (a produkcyjna aplikacja — w ośmiu językach);
+- dostępna w ośmiu językach;
 - pełną funkcjonalność offline jako instalowalna aplikacja PWA.
 
 ## Czym NIE jest

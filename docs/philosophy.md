@@ -18,7 +18,7 @@ aimy.bio is a free web application built on the method described in
   browser;
 - a family view, to see several profiles side by side;
 - BioMatch, a partner-compatibility score built on the same cycles;
-- Polish and English interfaces;
+- available in 8 languages;
 - fully offline-capable as an installable PWA.
 
 ## What it is NOT

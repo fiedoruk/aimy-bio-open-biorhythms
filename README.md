@@ -46,6 +46,7 @@ Full specification → [`docs/method.md`](docs/method.md)
 
 - [`docs/method.md`](docs/method.md) — the full, verifiable method specification (day-count, phase tables, BioMatch).
 - [`docs/philosophy.md`](docs/philosophy.md) — why this exists and why it's open.
+- Polish / po polsku: [`docs/pl/method.md`](docs/pl/method.md) · [`docs/pl/philosophy.md`](docs/pl/philosophy.md)
 - [`src/engine.js`](src/engine.js) — the reference implementation, zero dependencies.
 - [`data/README.md`](data/README.md) — data dictionary for the 663 + 86 golden vectors that pin correctness.
 
