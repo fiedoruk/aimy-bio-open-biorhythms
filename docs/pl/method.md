@@ -76,9 +76,9 @@ z cykli:
 
 Cykl fizyczny i intelektualny mają po jednym dniu krytycznym. **Cykl psychiczno-emocjonalny
 (P) jest wyjątkiem: ma dwa dni krytyczne, 13 i 14** — przejście z wysokiego do niskiego trwa
-w cyklu emocjonalnym dwa dni, a nie jeden. To wyróżniający, łatwy do przeoczenia szczegół
-metody — łatwy do pominięcia, jeśli symetryczne założenie „jeden dzień krytyczny" zostanie
-skopiowane na wszystkie trzy cykle F, P i I bez sprawdzenia tabeli faz każdego z nich osobno.
+w cyklu emocjonalnym dwa dni, a nie jeden. To wyróżniający szczegół metody, łatwy do pominięcia,
+jeśli symetryczne założenie „jeden dzień krytyczny" zostanie skopiowane na wszystkie trzy cykle
+F, P i I bez sprawdzenia tabeli faz każdego z nich osobno.
 
 ## Przykład obliczeniowy
 

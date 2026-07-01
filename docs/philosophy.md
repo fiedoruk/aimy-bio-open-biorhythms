@@ -1,10 +1,12 @@
 # Philosophy — why aimy.bio exists
 
-**Why aimy.bio exists.** aimy.bio is an online tribute to the work of **dr. Jerzy Sikora** on
-describing biorhythms through discrete phases and a birth-time correction, rather than a plain
-continuous sine wave. That method was reconstructed from dr. Sikora's own reference printouts
-from **1983, 2000, and 2001**, and validated against them digit by digit. aimy.bio exists to
-keep that work alive, accessible, and free — not to monetize it, and not to reinvent it.
+**Why aimy.bio exists.** It is a tribute to **dr Jerzy A. Sikora** — a Polish researcher born in
+1930 in Cieszyn, often called the father of Polish biorhythmics and author of the 1983 book
+*Biodiagram prawdę Ci powie* — who described biorhythms through discrete phases and a
+birth-time correction rather than a plain continuous sine wave. That method was reconstructed
+from dr. Sikora's own reference printouts from **1983, 2000, and 2001**, and validated against
+them digit by digit. aimy.bio exists to keep that work alive, accessible, and free — not to
+monetize it, and not to reinvent it.
 
 ## What it is
 
@@ -23,8 +25,9 @@ aimy.bio is a free web application built on the method described in
 
 ## What it is NOT
 
-- **Not commercial.** There are no paywalls, no accounts, and no collection of personal data.
-  Nothing about aimy.bio is sold, and nothing about a visitor is captured to be sold later.
+- **Not commercial.** There are no paywalls, no accounts, and no personal data collected to
+  build a user profile or to sell. Nothing about aimy.bio is sold, and nothing about a visitor
+  is captured to be sold later.
 - **Not medical.** The method and the application are a wellness and self-reflection practice,
   not a diagnostic or predictive medical tool. This is stated as a disclaimer wherever the
   method's output is shown, and it is repeated here deliberately: treat a "critical day" as a
@@ -40,8 +43,8 @@ aimy.bio is a free web application built on the method described in
    vectors. The sine wave you may see on a chart is a visualization convenience only — it never
    substitutes for the method's discrete-phase symbols as the source of truth for a given day.
 2. **Privacy by architecture.** Profiles live exclusively in the browser's local storage. The
-   server's job is to serve static files, nothing more — there is no account system and no
-   database of personal data to leak, because none exists.
+   server's job is to serve static files; your profiles never leave the browser — there is no
+   account system and no database of personal data to leak, because none exists.
 3. **Calm, original character.** The guiding idea behind both the method's framing and the
    application's design is simple: after the dip, the rise always comes. The interface reflects
    that with a calm, wellness-toned green palette, a handwritten accent typeface, no emoji, and
@@ -49,19 +52,18 @@ aimy.bio is a free web application built on the method described in
 
 ## Why open-source
 
-This repository exists because of an honest observation about the underlying application: the
-code for a static, client-side app is trivially copyable by anyone who wants to. Rather than
-treat that as a threat, this project turns it into an asset.
+Opening the method and the reference engine turns a promise into something you can check
+yourself. The engine is pure computation — anyone can read every line and confirm it makes no
+network calls and transmits nothing; in the app, your profiles live only in your browser. (How
+the hosted site handles data — cookieless, privacy-respecting analytics, an opt-in anonymous
+research aggregate, and IP processing by the hosting/CDN providers — is described in the
+aimy.bio privacy policy: https://aimy.bio.) Openness also lets anyone verify and build on the
+tribute rather than take it on faith, and the CC BY attribution keeps a link back to
+dr. Sikora's work on every fork and citation.
 
-Opening the method specification and the reference engine gives visitors something more
-convincing than a claim: **inspectable proof of the privacy promise** — anyone can read every
-line of the engine and confirm for themselves that no personal data is transmitted anywhere.
-It also turns the tribute itself into something the community can verify and build on, not just
-take on faith. The CC BY attribution requirement means that every citation, fork, or derivative
-work carries a link back home, to the method's origin and to dr. Sikora's work.
-
-The moat here was never secrecy of the code. It is fidelity to the method, and the trust that
-fidelity earns.
+There is little to lose by opening it: the code of a static, client-side app is trivially
+copyable anyway. The advantage here was never secrecy — it is fidelity to the method, and the
+trust that fidelity earns.
 
 ---
 Part of **aimy.bio** — a free, privacy-first tribute to the work of dr. Jerzy Sikora. Live: https://aimy.bio

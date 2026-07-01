@@ -1,11 +1,12 @@
 # Filozofia — po co istnieje aimy.bio
 
-**Po co istnieje aimy.bio.** aimy.bio to internetowy hołd dla pracy **dr. Jerzego Sikory** nad
-opisywaniem biorytmów za pomocą dyskretnych faz i korekty pory urodzenia, zamiast zwykłej
-ciągłej fali sinusoidalnej. Ta metoda została odtworzona na podstawie oryginalnych wydruków
-referencyjnych dr. Sikory z lat **1983, 2000 i 2001** i zweryfikowana względem nich cyfra po
-cyfrze. aimy.bio istnieje po to, by tę pracę utrzymać przy życiu, dostępną i darmową — nie po
-to, by ją zmonetyzować, i nie po to, by ją wymyślać na nowo.
+**Po co istnieje aimy.bio.** To hołd dla **dr. Jerzego A. Sikory** — polskiego badacza
+urodzonego w 1930 r. w Cieszynie, nazywanego ojcem polskiej biorytmiki, autora książki
+*Biodiagram prawdę Ci powie* (1983) — który opisał biorytmy poprzez dyskretne fazy i korektę
+pory urodzenia, zamiast zwykłej ciągłej fali sinusoidalnej. Ta metoda została odtworzona na
+podstawie oryginalnych wydruków referencyjnych dr. Sikory z lat **1983, 2000 i 2001** i
+zweryfikowana względem nich cyfra po cyfrze. aimy.bio istnieje po to, by tę pracę utrzymać przy
+życiu, dostępną i darmową — nie po to, by ją zmonetyzować, i nie po to, by ją wymyślać na nowo.
 
 ## Czym jest
 
@@ -24,9 +25,9 @@ aimy.bio to darmowa aplikacja webowa zbudowana na metodzie opisanej w
 
 ## Czym NIE jest
 
-- **Nie jest komercyjna.** Nie ma tu paywalli, kont użytkowników ani zbierania danych
-  osobowych. Nic w aimy.bio nie jest sprzedawane, a żadne dane odwiedzającego nie są
-  przechwytywane, by sprzedać je później.
+- **Nie jest komercyjna.** Nie ma tu paywalli, kont ani zbierania danych osobowych po to, by
+  budować profil użytkownika czy je sprzedawać. Nic w aimy.bio nie jest sprzedawane, a żadne
+  dane odwiedzającego nie są przechwytywane, by sprzedać je później.
 - **Nie jest medyczna.** Metoda i aplikacja są praktyką wellness i autorefleksji, a nie
   narzędziem diagnostycznym ani predykcyjnym w sensie medycznym. Jest to zastrzeżone jako
   disclaimer wszędzie tam, gdzie pokazywany jest wynik metody, i jest tu powtórzone
@@ -44,9 +45,9 @@ aimy.bio to darmowa aplikacja webowa zbudowana na metodzie opisanej w
    wizualnym udogodnieniem — nigdy nie zastępuje dyskretnych symboli fazowych metody jako
    źródła prawdy o danym dniu.
 2. **Prywatność wbudowana w architekturę.** Profile żyją wyłącznie w pamięci lokalnej
-   przeglądarki (localStorage). Zadaniem serwera jest wyłącznie serwowanie plików
-   statycznych, nic więcej — nie ma tu systemu kont ani bazy danych osobowych do wycieku,
-   bo żadna z nich nie istnieje.
+   przeglądarki (localStorage). Zadaniem serwera jest podawanie plików statycznych; Twoje
+   profile nigdy nie opuszczają przeglądarki — nie ma tu systemu kont ani bazy danych
+   osobowych do wycieku, bo żadna z nich nie istnieje.
 3. **Spokojny, autentyczny charakter.** Idea przewodnia stojąca zarówno za ujęciem metody,
    jak i za projektem aplikacji, jest prosta: po dołku zawsze przyjdzie górka. Interfejs
    odzwierciedla to spokojną, wellnessową paletą zieleni, odręcznym krojem akcentowym, brakiem
@@ -55,20 +56,19 @@ aimy.bio to darmowa aplikacja webowa zbudowana na metodzie opisanej w
 
 ## Dlaczego open source
 
-To repozytorium istnieje z powodu uczciwej obserwacji dotyczącej samej aplikacji: kod
-statycznej aplikacji działającej po stronie klienta jest trywialnie łatwy do skopiowania przez
-każdego, kto tego zechce. Zamiast traktować to jako zagrożenie, ten projekt zamienia to w atut.
+Otwarcie metody i silnika referencyjnego zamienia obietnicę w coś, co można samemu sprawdzić.
+Silnik to czysta matematyka — każdy może przeczytać każdą linijkę i potwierdzić, że nie
+wykonuje żadnych połączeń sieciowych i nic nie wysyła; w aplikacji Twoje profile żyją
+wyłącznie w Twojej przeglądarce. (To, jak hostowana strona obchodzi się z danymi — analityka
+bez ciasteczek i szanująca prywatność, dobrowolny anonimowy agregat badawczy oraz
+przetwarzanie IP przez dostawców hostingu/CDN — opisuje polityka prywatności na aimy.bio:
+https://aimy.bio.) Otwartość pozwala też każdemu zweryfikować hołd i na nim budować, zamiast
+przyjmować go na wiarę, a wymóg atrybucji CC BY sprawia, że link do pracy dr. Sikory jedzie z
+każdym forkiem i cytatem.
 
-Otwarcie specyfikacji metody i silnika referencyjnego daje odwiedzającym coś bardziej
-przekonującego niż deklarację: **dowód możliwy do sprawdzenia obietnicy prywatności** — każdy
-może przeczytać każdą linijkę silnika i samodzielnie potwierdzić, że żadne dane osobowe nigdzie
-nie są przesyłane. To także zamienia sam hołd w coś, co społeczność może zweryfikować i na czym
-może budować, a nie musi przyjmować na wiarę. Wymóg atrybucji licencji CC BY oznacza, że każde
-cytowanie, fork czy dzieło pochodne niesie ze sobą link z powrotem do domu — do źródła metody i
-do pracy dr. Sikory.
-
-Fosą obronną nigdy nie była tajność kodu. Jest nią wierność metodzie i zaufanie, które ta
-wierność buduje.
+Otwierając ten kod, niewiele tracimy: kod statycznej aplikacji po stronie klienta i tak jest
+trywialnie łatwy do skopiowania. Przewagą nigdy nie była tajność — jest nią wierność metodzie
+i zaufanie, które ta wierność buduje.
 
 ---
 Część projektu **aimy.bio** — darmowy, privacy-first hołd dla pracy dr. Jerzego Sikory. Na żywo: https://aimy.bio

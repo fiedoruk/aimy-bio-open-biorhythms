@@ -1,4 +1,4 @@
-# aimy-bio-open-biorhythms
+# Open Biorhythms — dr. Jerzy Sikora's method, verified and free
 
 > The open, verified engine and specification of dr. Jerzy Sikora's biorhythm method — powering the free app at [aimy.bio](https://aimy.bio).
 
@@ -8,12 +8,17 @@
 
 This repository is the reference engine (`src/engine.js`) and the canonical specification
 (`docs/method.md`) of **dr. Jerzy Sikora**'s discrete-phase biorhythm method — a tribute to his
-work, not a product. It is privacy-first and free: there is no telemetry here, no account, and
-no dependency to install — just math you can read line by line and verify yourself.
+work, not a product. The method is dr Jerzy A. Sikora's — a Polish researcher (b. 1930,
+Cieszyn), the father of Polish biorhythmics. It is privacy-first and free: there is no
+telemetry here, no account, and no dependency to install — just math you can read line by line
+and verify yourself.
+
+Reconstructed from dr. Sikora's own reference printouts (1983, 2000, 2001) and validated
+against them digit by digit — then pinned by 663 + 86 golden vectors so it can't drift.
 
 ## See it live
 
-**Live app → https://aimy.bio**
+**Live app → https://aimy.bio** — free, 8 languages, works offline, nothing to install.
 
 ## Verify it yourself
 
@@ -27,6 +32,8 @@ npm test   # 663 Sikora + 86 BioMatch golden vectors -> ALL GREEN
 
 Zero dependencies — plain Node.js, nothing to install first.
 
+Or try it on your own birthday: `node examples/today.mjs 1990-05-15`
+
 ## The method in 30 seconds
 
 Every day, in every cycle, is classified into exactly one of four states:
@@ -39,6 +46,33 @@ Every day, in every cycle, is classified into exactly one of four states:
 | `0` | Zero day | Regeneration — transition from low to high |
 
 That symbol — not a percentage, not a curve — is the ground truth of the method.
+
+This is unmodified output of `src/engine.js` (born 1990-05-15, on 2026-07-01) — reproduce it
+yourself with `npm test`.
+
+```json
+{
+  "daysAlive": 13195,
+  "physical": {
+    "symbol": "-",
+    "day": 16,
+    "length": 23,
+    "percent": 5
+  },
+  "emotional": {
+    "symbol": "+",
+    "day": 7,
+    "length": 28,
+    "percent": 88
+  },
+  "intellectual": {
+    "symbol": "-",
+    "day": 28,
+    "length": 33,
+    "percent": 29
+  }
+}
+```
 
 Full specification → [`docs/method.md`](docs/method.md)
 
@@ -60,6 +94,18 @@ https://aimy.bio.
 
 - `src/**` — [MIT](LICENSE).
 - `docs/**` and `data/**` — [CC BY 4.0](LICENSE-docs) (attribution to aimy.bio required).
+
+## Using this? Link back
+
+Docs & data are CC BY 4.0 — reuse freely, just keep the credit. Paste-ready:
+
+> Biorhythm engine & method spec: aimy.bio — https://aimy.bio (CC BY 4.0)
+
+Or drop this badge in your README:
+
+```md
+[![biorhythm engine: aimy.bio](https://img.shields.io/badge/biorhythm_engine-aimy.bio-2ea44f)](https://aimy.bio)
+```
 
 ## Contributing
 
