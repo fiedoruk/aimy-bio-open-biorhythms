@@ -74,8 +74,8 @@ each cycle:
 The Physical and Intellectual cycles each have a single critical day. The **Psychical/emotional
 (P) cycle is the exception: it has two critical days, 13 and 14** — the transition from high to
 low takes two days in the emotional cycle rather than one. This is a distinguishing, easy-to-miss
-detail of the method, and a common source of implementation errors when a general emotional/physical/intellectual
-biorhythm engine is written without reference to Sikora's specific tables.
+detail of the method — a detail that is easy to miss if a symmetric two-cycle assumption is copied
+across the F, P and I cycles without checking each cycle's own phase table.
 
 ## Worked example
 
