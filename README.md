@@ -34,6 +34,27 @@ Zero dependencies — plain Node.js, nothing to install first.
 
 Or try it on your own birthday: `node examples/today.mjs 1990-05-15`
 
+## Install / use as a package
+
+No cloning required — try it directly with npx:
+
+```bash
+npx aimy-bio-open-biorhythms 1990-05-15   # or, once installed: aimy-biorhythm 1990-05-15
+```
+
+Add `--json` for machine-readable output, or `--help` for all CLI options (`--date`).
+
+Or add it as a dependency and use the engine directly:
+
+```bash
+npm i aimy-bio-open-biorhythms
+```
+
+```js
+import { getBiorhythmsFor } from 'aimy-bio-open-biorhythms';
+console.log(getBiorhythmsFor(new Date(1990, 4, 15), new Date()));
+```
+
 ## The method in 30 seconds
 
 Every day, in every cycle, is classified into exactly one of four states:

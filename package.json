@@ -9,7 +9,28 @@
     "type": "git",
     "url": "https://github.com/fiedoruk/aimy-bio-open-biorhythms"
   },
+  "bin": {
+    "aimy-biorhythm": "bin/cli.mjs"
+  },
+  "exports": {
+    ".": "./src/engine.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
   "keywords": ["biorhythm", "biorhythms", "sikora", "wellness", "aimy.bio"],
+  "files": [
+    "src",
+    "bin",
+    "data",
+    "docs",
+    "README.md",
+    "LICENSE",
+    "LICENSE-docs",
+    "CITATION.cff",
+    "llms.txt",
+    "CHANGELOG.md"
+  ],
   "scripts": {
     "test": "node src/engine.test.mjs"
   }
