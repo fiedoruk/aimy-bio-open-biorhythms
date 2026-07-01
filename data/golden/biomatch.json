@@ -1,0 +1,1808 @@
+[
+ {
+  "user": [
+   1,
+   1,
+   1
+  ],
+  "partner": [
+   1,
+   1,
+   1
+  ],
+  "physSync": 100,
+  "emoSync": 100,
+  "intSync": 100,
+  "overall": 100,
+  "physical": 100,
+  "emotional": 100,
+  "intellectual": 100,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ },
+ {
+  "user": [
+   1,
+   1,
+   1
+  ],
+  "partner": [
+   -1,
+   -1,
+   -1
+  ],
+  "physSync": 0,
+  "emoSync": 0,
+  "intSync": 0,
+  "overall": 0,
+  "physical": 0,
+  "emotional": 0,
+  "intellectual": 0,
+  "type": "complement",
+  "advice": "Dziś możecie się wzajemnie uzupełniać. Jeden wspiera, drugi odpoczywa. 🤝"
+ },
+ {
+  "user": [
+   0,
+   0,
+   0
+  ],
+  "partner": [
+   1,
+   1,
+   1
+  ],
+  "physSync": 50,
+  "emoSync": 50,
+  "intSync": 50,
+  "overall": 50,
+  "physical": 50,
+  "emotional": 50,
+  "intellectual": 50,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   1,
+   1,
+   1
+  ],
+  "partner": [
+   0.6,
+   0.6,
+   0.6
+  ],
+  "physSync": 80,
+  "emoSync": 80,
+  "intSync": 80,
+  "overall": 80,
+  "physical": 80,
+  "emotional": 80,
+  "intellectual": 80,
+  "type": "sync",
+  "advice": "Jesteście na tej samej fali. Wykorzystajcie tę harmonię! 🌊"
+ },
+ {
+  "user": [
+   1,
+   0,
+   -1
+  ],
+  "partner": [
+   -1,
+   0,
+   1
+  ],
+  "physSync": 0,
+  "emoSync": 100,
+  "intSync": 0,
+  "overall": 45,
+  "physical": 0,
+  "emotional": 100,
+  "intellectual": 0,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   0.5,
+   0.9,
+   0.3
+  ],
+  "partner": [
+   0.4,
+   -0.3,
+   0.8
+  ],
+  "physSync": 95,
+  "emoSync": 40,
+  "intSync": 75,
+  "overall": 64,
+  "physical": 95,
+  "emotional": 40,
+  "intellectual": 75,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   0.36792077124118805,
+   -0.20611381577327847,
+   0.8729359293356538
+  ],
+  "partner": [
+   0.14991337480023503,
+   -0.9676746930927038,
+   -0.24638418713584542
+  ],
+  "physSync": 89.09963017795235,
+  "emoSync": 61.92195613402873,
+  "intSync": 44.03399417642504,
+  "overall": 63,
+  "physical": 89,
+  "emotional": 62,
+  "intellectual": 44,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   -0.16695634741336107,
+   -0.542042279150337,
+   -0.4525667689740658
+  ],
+  "partner": [
+   -0.22899061115458608,
+   -0.1248961417004466,
+   -0.2781279901973903
+  ],
+  "physSync": 96.89828681293875,
+  "emoSync": 79.14269312750548,
+  "intSync": 91.27806106116623,
+  "overall": 87,
+  "physical": 97,
+  "emotional": 79,
+  "intellectual": 91,
+  "type": "sync",
+  "advice": "Wasza energia jest zsynchronizowana! Świetny dzień na wspólne aktywności. 🏃‍♂️"
+ },
+ {
+  "user": [
+   -0.5207473654299974,
+   -0.5363064208067954,
+   -0.9729574853554368
+  ],
+  "partner": [
+   0.4138246872462332,
+   0.00967448204755783,
+   -0.11063384311273694
+  ],
+  "physSync": 53.27139736618847,
+  "emoSync": 72.70095485728234,
+  "intSync": 56.88381788786501,
+  "overall": 63,
+  "physical": 53,
+  "emotional": 73,
+  "intellectual": 57,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   -0.3255712827667594,
+   0.9326886055059731,
+   -0.026784224435687065
+  ],
+  "partner": [
+   -0.5390428663231432,
+   0.14506941568106413,
+   0.14127246895805
+  ],
+  "physSync": 89.32642082218081,
+  "emoSync": 60.61904050875455,
+  "intSync": 91.59716533031315,
+  "overall": 77,
+  "physical": 89,
+  "emotional": 61,
+  "intellectual": 92,
+  "type": "sync",
+  "advice": "Wasza energia jest zsynchronizowana! Świetny dzień na wspólne aktywności. 🏃‍♂️"
+ },
+ {
+  "user": [
+   0.02852834388613701,
+   0.6137430178932846,
+   -0.9310052348300815
+  ],
+  "partner": [
+   0.9836304043419659,
+   -0.12907674349844456,
+   -0.9943358027376235
+  ],
+  "physSync": 52.244896977208555,
+  "emoSync": 62.859011930413544,
+  "intSync": 96.8334716046229,
+  "overall": 70,
+  "physical": 52,
+  "emotional": 63,
+  "intellectual": 97,
+  "type": "sync",
+  "advice": "Jesteście na tej samej fali. Wykorzystajcie tę harmonię! 🌊"
+ },
+ {
+  "user": [
+   -0.32991589698940516,
+   -0.786300343926996,
+   -0.10783913731575012
+  ],
+  "partner": [
+   -0.46790455328300595,
+   -0.3544174497947097,
+   -0.23348359344527125
+  ],
+  "physSync": 93.10056718531996,
+  "emoSync": 78.40585529338568,
+  "intSync": 93.71777719352394,
+  "overall": 87,
+  "physical": 93,
+  "emotional": 78,
+  "intellectual": 94,
+  "type": "sync",
+  "advice": "Wasza energia jest zsynchronizowana! Świetny dzień na wspólne aktywności. 🏃‍♂️"
+ },
+ {
+  "user": [
+   -0.8062435444444418,
+   -0.06368043879047036,
+   0.7897582380101085
+  ],
+  "partner": [
+   0.8032597214914858,
+   0.36005156114697456,
+   -0.7030458864755929
+  ],
+  "physSync": 19.52483670320362,
+  "emoSync": 78.81340000312775,
+  "intSync": 25.359793775714934,
+  "overall": 48,
+  "physical": 20,
+  "emotional": 79,
+  "intellectual": 25,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   -0.9820498405024409,
+   -0.038626379799097776,
+   -0.10269914753735065
+  ],
+  "partner": [
+   -0.8264186629094183,
+   -0.05274335388094187,
+   -0.15898272907361388
+  ],
+  "physSync": 92.21844112034887,
+  "emoSync": 99.2941512959078,
+  "intSync": 97.18582092318684,
+  "overall": 97,
+  "physical": 92,
+  "emotional": 99,
+  "intellectual": 97,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ },
+ {
+  "user": [
+   -0.2549753114581108,
+   -0.3081688662059605,
+   -0.3098855307325721
+  ],
+  "partner": [
+   0.25909331114962697,
+   -0.234122721478343,
+   -0.6508327932097018
+  ],
+  "physSync": 74.29656886961311,
+  "emoSync": 96.29769276361912,
+  "intSync": 82.95263687614352,
+  "overall": 87,
+  "physical": 74,
+  "emotional": 96,
+  "intellectual": 83,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ },
+ {
+  "user": [
+   -0.982981433160603,
+   -0.6978957070969045,
+   -0.3797195293009281
+  ],
+  "partner": [
+   -0.1773736816830933,
+   -0.4553676052019,
+   -0.2909127469174564
+  ],
+  "physSync": 59.71961242612451,
+  "emoSync": 87.87359490524977,
+  "intSync": 95.55966088082641,
+  "overall": 83,
+  "physical": 60,
+  "emotional": 88,
+  "intellectual": 96,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ },
+ {
+  "user": [
+   0.9320731665939093,
+   -0.44023932749405503,
+   -0.8944610962644219
+  ],
+  "partner": [
+   -0.38412359124049544,
+   -0.8485736399888992,
+   0.4340334231965244
+  ],
+  "physSync": 34.190162108279765,
+  "emoSync": 79.58328437525779,
+  "intSync": 33.575274026952684,
+  "overall": 54,
+  "physical": 34,
+  "emotional": 80,
+  "intellectual": 34,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   -0.044117859564721584,
+   -0.8080560225062072,
+   -0.9787261988967657
+  ],
+  "partner": [
+   0.2459173067472875,
+   -0.022850525565445423,
+   -0.798930877353996
+  ],
+  "physSync": 85.49824168439955,
+  "emoSync": 60.73972515296191,
+  "intSync": 91.01023392286152,
+  "overall": 76,
+  "physical": 85,
+  "emotional": 61,
+  "intellectual": 91,
+  "type": "sync",
+  "advice": "Wasza energia jest zsynchronizowana! Świetny dzień na wspólne aktywności. 🏃‍♂️"
+ },
+ {
+  "user": [
+   0.05350828543305397,
+   0.3509463998489082,
+   -0.4716555504128337
+  ],
+  "partner": [
+   0.017085023690015078,
+   0.9211935680359602,
+   0.19597100233659148
+  ],
+  "physSync": 98.17883691284806,
+  "emoSync": 71.4876415906474,
+  "intSync": 66.61867236252874,
+  "overall": 77,
+  "physical": 98,
+  "emotional": 71,
+  "intellectual": 67,
+  "type": "sync",
+  "advice": "Wasza energia jest zsynchronizowana! Świetny dzień na wspólne aktywności. 🏃‍♂️"
+ },
+ {
+  "user": [
+   -0.8951997393742204,
+   0.12595407152548432,
+   0.1730419024825096
+  ],
+  "partner": [
+   -0.9551343549974263,
+   -0.5401161452755332,
+   -0.35457881120964885
+  ],
+  "physSync": 97.0032692188397,
+  "emoSync": 66.69648915994912,
+  "intSync": 73.61896431539208,
+  "overall": 76,
+  "physical": 97,
+  "emotional": 67,
+  "intellectual": 74,
+  "type": "sync",
+  "advice": "Wasza energia jest zsynchronizowana! Świetny dzień na wspólne aktywności. 🏃‍♂️"
+ },
+ {
+  "user": [
+   -0.8235927950590849,
+   -0.3250597775913775,
+   0.34584065806120634
+  ],
+  "partner": [
+   0.8934952751733363,
+   -0.3049561567604542,
+   -0.6746957493014634
+  ],
+  "physSync": 14.145596488378942,
+  "emoSync": 98.99481895845383,
+  "intSync": 48.973179631866515,
+  "overall": 63,
+  "physical": 14,
+  "emotional": 99,
+  "intellectual": 49,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   0.530029927380383,
+   0.5370087777264416,
+   -0.9921189490705729
+  ],
+  "partner": [
+   -0.3215657495893538,
+   0.24280072655528784,
+   0.3515053861774504
+  ],
+  "physSync": 57.42021615151316,
+  "emoSync": 85.28959744144231,
+  "intSync": 32.818783237598836,
+  "overall": 63,
+  "physical": 57,
+  "emotional": 85,
+  "intellectual": 33,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   -0.024937033653259277,
+   0.15619425429031253,
+   -0.2867414718493819
+  ],
+  "partner": [
+   0.12370585324242711,
+   -0.04249570332467556,
+   -0.6884405598975718
+  ],
+  "physSync": 92.56785565521568,
+  "emoSync": 90.0655021192506,
+  "intSync": 79.9150455975905,
+  "overall": 88,
+  "physical": 93,
+  "emotional": 90,
+  "intellectual": 80,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ },
+ {
+  "user": [
+   -0.050827560015022755,
+   0.7278019399382174,
+   0.9962116070091724
+  ],
+  "partner": [
+   -0.40270711155608296,
+   0.4172730566933751,
+   -0.09317151410505176
+  ],
+  "physSync": 82.40602242294699,
+  "emoSync": 84.47355583775789,
+  "intSync": 45.53084394428879,
+  "overall": 72,
+  "physical": 82,
+  "emotional": 84,
+  "intellectual": 46,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ },
+ {
+  "user": [
+   0.1576202344149351,
+   -0.7071745344437659,
+   0.7801909362897277
+  ],
+  "partner": [
+   -0.20963639533147216,
+   -0.5488031730055809,
+   -0.12941116886213422
+  ],
+  "physSync": 81.63716851267964,
+  "emoSync": 92.08143192809075,
+  "intSync": 54.519894742406905,
+  "overall": 78,
+  "physical": 82,
+  "emotional": 92,
+  "intellectual": 55,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ },
+ {
+  "user": [
+   0.34628570172935724,
+   -0.32019299594685435,
+   -0.7744424920529127
+  ],
+  "partner": [
+   -0.4169484288431704,
+   -0.6113842325285077,
+   0.13248643139377236
+  ],
+  "physSync": 61.83829347137362,
+  "emoSync": 85.44043817091733,
+  "intSync": 54.653553827665746,
+  "overall": 70,
+  "physical": 62,
+  "emotional": 85,
+  "intellectual": 55,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ },
+ {
+  "user": [
+   -0.5506483353674412,
+   0.5517084556631744,
+   0.9892986910417676
+  ],
+  "partner": [
+   0.87584224389866,
+   -0.2168386373668909,
+   -0.8607271783985198
+  ],
+  "physSync": 28.675471036694944,
+  "emoSync": 61.572645348496735,
+  "intSync": 7.498706527985632,
+  "overall": 37,
+  "physical": 29,
+  "emotional": 62,
+  "intellectual": 7,
+  "type": "complement",
+  "advice": "Różne fazy oznaczają szansę na wzajemne wsparcie. Bądźcie cierpliwi. 🌱"
+ },
+ {
+  "user": [
+   0.5655121495947242,
+   -0.4170598960481584,
+   -0.15133361518383026
+  ],
+  "partner": [
+   -0.11367791937664151,
+   0.7333855414763093,
+   -0.9594382005743682
+  ],
+  "physSync": 66.04049655143172,
+  "emoSync": 42.477728123776615,
+  "intSync": 59.5947707304731,
+  "overall": 54,
+  "physical": 66,
+  "emotional": 42,
+  "intellectual": 60,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   -0.39867510460317135,
+   -0.2063536481000483,
+   -0.3339677872136235
+  ],
+  "partner": [
+   0.7411241889931262,
+   0.21281972900032997,
+   0.2315502199344337
+  ],
+  "physSync": 43.010035320185125,
+  "emoSync": 79.04133114498109,
+  "intSync": 71.72409964259714,
+  "overall": 68,
+  "physical": 43,
+  "emotional": 79,
+  "intellectual": 72,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   -0.3980276910588145,
+   -0.5703237275592983,
+   0.3695203047245741
+  ],
+  "partner": [
+   0.2573576173745096,
+   0.6601962512359023,
+   -0.36277561401948333
+  ],
+  "physSync": 67.2307345783338,
+  "emoSync": 38.47400106023997,
+  "intSync": 63.38520406279713,
+  "overall": 53,
+  "physical": 67,
+  "emotional": 38,
+  "intellectual": 63,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   -0.6067898347973824,
+   -0.37763016717508435,
+   -0.38188116159290075
+  ],
+  "partner": [
+   -0.26836447743698955,
+   -0.9096698593348265,
+   0.2495266436599195
+  ],
+  "physSync": 83.07873213198036,
+  "emoSync": 73.3980153920129,
+  "intSync": 68.42960973735899,
+  "overall": 74,
+  "physical": 83,
+  "emotional": 73,
+  "intellectual": 68,
+  "type": "sync",
+  "advice": "Wasza energia jest zsynchronizowana! Świetny dzień na wspólne aktywności. 🏃‍♂️"
+ },
+ {
+  "user": [
+   -0.1913260268047452,
+   -0.4826312228105962,
+   0.7359871380031109
+  ],
+  "partner": [
+   -0.53697942616418,
+   0.7928000139072537,
+   -0.08471508277580142
+  ],
+  "physSync": 82.71733003202826,
+  "emoSync": 36.2284381641075,
+  "intSync": 58.964888961054385,
+  "overall": 55,
+  "physical": 83,
+  "emotional": 36,
+  "intellectual": 59,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   0.0989785548299551,
+   0.7511142767034471,
+   0.9635657509788871
+  ],
+  "partner": [
+   -0.24621592229232192,
+   -0.08591768145561218,
+   0.34341104282066226
+  ],
+  "physSync": 82.74027614388615,
+  "emoSync": 58.148402092047036,
+  "intSync": 68.99226459208876,
+  "overall": 68,
+  "physical": 83,
+  "emotional": 58,
+  "intellectual": 69,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   0.7381870085373521,
+   -0.7974784183315933,
+   -0.2921374496072531
+  ],
+  "partner": [
+   0.383828432764858,
+   0.49418387096375227,
+   -0.12004811456426978
+  ],
+  "physSync": 82.2820712113753,
+  "emoSync": 35.41688553523272,
+  "intSync": 91.39553324785084,
+  "overall": 64,
+  "physical": 82,
+  "emotional": 35,
+  "intellectual": 91,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   -0.6157591454684734,
+   -0.019474965054541826,
+   -0.0940714655444026
+  ],
+  "partner": [
+   0.16595064895227551,
+   -0.5239167679101229,
+   -0.08596965158358216
+  ],
+  "physSync": 60.91451027896255,
+  "emoSync": 74.77790985722095,
+  "intSync": 99.59490930195898,
+  "overall": 79,
+  "physical": 61,
+  "emotional": 75,
+  "intellectual": 100,
+  "type": "sync",
+  "advice": "Jesteście na tej samej fali. Wykorzystajcie tę harmonię! 🌊"
+ },
+ {
+  "user": [
+   -0.1621662164106965,
+   0.7507649310864508,
+   -0.5309473797678947
+  ],
+  "partner": [
+   -0.7151722093112767,
+   0.4504320928826928,
+   -0.048458490055054426
+  ],
+  "physSync": 72.34970035497099,
+  "emoSync": 84.9833580898121,
+  "intSync": 75.87555551435798,
+  "overall": 79,
+  "physical": 72,
+  "emotional": 85,
+  "intellectual": 76,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ },
+ {
+  "user": [
+   0.10397705622017384,
+   0.8816408305428922,
+   -0.3244046466425061
+  ],
+  "partner": [
+   0.8276833281852305,
+   0.06398346647620201,
+   0.5516722458414733
+  ],
+  "physSync": 63.81468640174717,
+  "emoSync": 59.11713179666549,
+  "intSync": 56.19615537580103,
+  "overall": 59,
+  "physical": 64,
+  "emotional": 59,
+  "intellectual": 56,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   0.7171452241018414,
+   0.6262840633280575,
+   -0.04735291935503483
+  ],
+  "partner": [
+   0.3540465063415468,
+   -0.26689589116722345,
+   -0.4111091769300401
+  ],
+  "physSync": 81.84506411198527,
+  "emoSync": 55.34100227523595,
+  "intSync": 81.81218712124974,
+  "overall": 70,
+  "physical": 82,
+  "emotional": 55,
+  "intellectual": 82,
+  "type": "sync",
+  "advice": "Wasza energia jest zsynchronizowana! Świetny dzień na wspólne aktywności. 🏃‍♂️"
+ },
+ {
+  "user": [
+   0.969406470656395,
+   -0.22229471849277616,
+   -0.6441632425412536
+  ],
+  "partner": [
+   0.650844965595752,
+   0.18849421478807926,
+   -0.19499392667785287
+  ],
+  "physSync": 84.07192474696785,
+  "emoSync": 79.46055333595723,
+  "intSync": 77.54153420682997,
+  "overall": 80,
+  "physical": 84,
+  "emotional": 79,
+  "intellectual": 78,
+  "type": "sync",
+  "advice": "Wasza energia jest zsynchronizowana! Świetny dzień na wspólne aktywności. 🏃‍♂️"
+ },
+ {
+  "user": [
+   0.20633249264210463,
+   0.0644510448910296,
+   0.8476331867277622
+  ],
+  "partner": [
+   -0.8977260258980095,
+   -0.9411219386383891,
+   -0.5227761189453304
+  ],
+  "physSync": 44.79707407299429,
+  "emoSync": 49.721350823529065,
+  "intSync": 31.47953471634537,
+  "overall": 43,
+  "physical": 45,
+  "emotional": 50,
+  "intellectual": 31,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   0.5527484696358442,
+   0.11855654930695891,
+   0.8123711114749312
+  ],
+  "partner": [
+   0.49646375561133027,
+   0.8049448952078819,
+   -0.6261681546457112
+  ],
+  "physSync": 97.1857642987743,
+  "emoSync": 65.68058270495385,
+  "intSync": 28.07303669396788,
+  "overall": 62,
+  "physical": 97,
+  "emotional": 66,
+  "intellectual": 28,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   -0.07547570671886206,
+   -0.728590268176049,
+   -0.2439997922629118
+  ],
+  "partner": [
+   0.7179195224307477,
+   -0.5347900139167905,
+   -0.8757788999937475
+  ],
+  "physSync": 60.33023854251951,
+  "emoSync": 90.30998728703707,
+  "intSync": 68.41104461345822,
+  "overall": 76,
+  "physical": 60,
+  "emotional": 90,
+  "intellectual": 68,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ },
+ {
+  "user": [
+   0.5986238531768322,
+   0.8413451123051345,
+   0.4451956497505307
+  ],
+  "partner": [
+   -0.2389630521647632,
+   0.4977313932031393,
+   0.8194074011407793
+  ],
+  "physSync": 58.12065473292023,
+  "emoSync": 82.81931404490024,
+  "intSync": 81.28941243048757,
+  "overall": 76,
+  "physical": 58,
+  "emotional": 83,
+  "intellectual": 81,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ },
+ {
+  "user": [
+   0.5765198012813926,
+   0.09436385566368699,
+   -0.5310154557228088
+  ],
+  "partner": [
+   -0.02930106269195676,
+   0.12075861636549234,
+   0.2080417168326676
+  ],
+  "physSync": 69.70895680133253,
+  "emoSync": 98.68026196490973,
+  "intSync": 63.04714137222618,
+  "overall": 81,
+  "physical": 70,
+  "emotional": 99,
+  "intellectual": 63,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ },
+ {
+  "user": [
+   -0.8891531582921743,
+   0.8113296641968191,
+   0.9814331559464335
+  ],
+  "partner": [
+   0.4960376829840243,
+   -0.40359507128596306,
+   0.38610367802903056
+  ],
+  "physSync": 30.74045793619007,
+  "emoSync": 39.253763225860894,
+  "intSync": 70.23352610412985,
+  "overall": 46,
+  "physical": 31,
+  "emotional": 39,
+  "intellectual": 70,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   -0.30319278221577406,
+   0.506318234372884,
+   -0.1687945295125246
+  ],
+  "partner": [
+   -0.2421008893288672,
+   -0.5106741869822145,
+   0.521049375180155
+  ],
+  "physSync": 96.94540535565466,
+  "emoSync": 49.150378932245076,
+  "intSync": 65.50780476536602,
+  "overall": 66,
+  "physical": 97,
+  "emotional": 49,
+  "intellectual": 66,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   0.18335769325494766,
+   -0.06349886255338788,
+   -0.9720557322725654
+  ],
+  "partner": [
+   -0.5956250461749732,
+   -0.30784845165908337,
+   -0.9718618900515139
+  ],
+  "physSync": 61.050863028503954,
+  "emoSync": 87.78252054471523,
+  "intSync": 99.99030788894743,
+  "overall": 85,
+  "physical": 61,
+  "emotional": 88,
+  "intellectual": 100,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ },
+ {
+  "user": [
+   0.059597949497401714,
+   0.7490231082774699,
+   0.16144150123000145
+  ],
+  "partner": [
+   -0.11302918614819646,
+   0.5660626189783216,
+   -0.14700916362926364
+  ],
+  "physSync": 91.36864321772009,
+  "emoSync": 90.85197553504258,
+  "intSync": 84.57746675703675,
+  "overall": 89,
+  "physical": 91,
+  "emotional": 91,
+  "intellectual": 85,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ },
+ {
+  "user": [
+   0.0440459456294775,
+   0.04978485172614455,
+   0.6024554064497352
+  ],
+  "partner": [
+   0.5575566911138594,
+   -0.47658775746822357,
+   0.23513615084812045
+  ],
+  "physSync": 74.3244627257809,
+  "emoSync": 73.6813695402816,
+  "intSync": 81.63403721991926,
+  "overall": 76,
+  "physical": 74,
+  "emotional": 74,
+  "intellectual": 82,
+  "type": "sync",
+  "advice": "Jesteście na tej samej fali. Wykorzystajcie tę harmonię! 🌊"
+ },
+ {
+  "user": [
+   0.4736264133825898,
+   -0.5221283989958465,
+   0.6987973842769861
+  ],
+  "partner": [
+   0.18819959601387382,
+   -0.595309060998261,
+   -0.3426221846602857
+  ],
+  "physSync": 85.7286591315642,
+  "emoSync": 96.34096689987928,
+  "intSync": 47.92902155313641,
+  "overall": 79,
+  "physical": 86,
+  "emotional": 96,
+  "intellectual": 48,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ },
+ {
+  "user": [
+   -0.7197857163846493,
+   -0.8474292126484215,
+   -0.6380476681515574
+  ],
+  "partner": [
+   0.17730597453191876,
+   0.6993936877697706,
+   0.7502709231339395
+  ],
+  "physSync": 55.1454154541716,
+  "emoSync": 22.658854979090393,
+  "intSync": 30.584070435725152,
+  "overall": 33,
+  "physical": 55,
+  "emotional": 23,
+  "intellectual": 31,
+  "type": "complement",
+  "advice": "Dziś możecie się wzajemnie uzupełniać. Jeden wspiera, drugi odpoczywa. 🤝"
+ },
+ {
+  "user": [
+   -0.8195345336571336,
+   0.7525003054179251,
+   0.04301171749830246
+  ],
+  "partner": [
+   0.5512048075906932,
+   0.6544908443465829,
+   0.8448219415731728
+  ],
+  "physSync": 31.46303293760866,
+  "emoSync": 95.09952694643289,
+  "intSync": 59.90948879625648,
+  "overall": 69,
+  "physical": 31,
+  "emotional": 95,
+  "intellectual": 60,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   -0.2855669688433409,
+   -0.8866780162788928,
+   0.7470893217250705
+  ],
+  "partner": [
+   -0.6746196313761175,
+   -0.7697803862392902,
+   -0.22526900889351964
+  ],
+  "physSync": 80.54736687336117,
+  "emoSync": 94.15511849801987,
+  "intSync": 51.382083469070494,
+  "overall": 78,
+  "physical": 81,
+  "emotional": 94,
+  "intellectual": 51,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ },
+ {
+  "user": [
+   0.575107459910214,
+   -0.7831570054404438,
+   0.05765519104897976
+  ],
+  "partner": [
+   0.9790167487226427,
+   0.3258035024628043,
+   0.5470728450454772
+  ],
+  "physSync": 79.80453555937856,
+  "emoSync": 44.551974604837596,
+  "intSync": 75.52911730017513,
+  "overall": 63,
+  "physical": 80,
+  "emotional": 45,
+  "intellectual": 76,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   0.8995352685451508,
+   -0.5849889372475445,
+   -0.23863602336496115
+  ],
+  "partner": [
+   0.8453443837352097,
+   -0.6675272043794394,
+   0.7522662593983114
+  ],
+  "physSync": 97.29045575950295,
+  "emoSync": 95.87308664340526,
+  "intSync": 50.454885861836374,
+  "overall": 83,
+  "physical": 97,
+  "emotional": 96,
+  "intellectual": 50,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ },
+ {
+  "user": [
+   0.46756091993302107,
+   -0.6876125424169004,
+   0.20496945455670357
+  ],
+  "partner": [
+   -0.7465180573053658,
+   0.5027997316792607,
+   -0.8044906328432262
+  ],
+  "physSync": 39.29605113808066,
+  "emoSync": 40.479386295191944,
+  "intSync": 49.52699563000351,
+  "overall": 43,
+  "physical": 39,
+  "emotional": 40,
+  "intellectual": 50,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   -0.2984974253922701,
+   0.04513487732037902,
+   0.6038076495751739
+  ],
+  "partner": [
+   -0.5999549380503595,
+   0.4788776710629463,
+   0.32756199641153216
+  ],
+  "physSync": 84.92712436709553,
+  "emoSync": 78.31286031287163,
+  "intSync": 86.18771734181792,
+  "overall": 82,
+  "physical": 85,
+  "emotional": 78,
+  "intellectual": 86,
+  "type": "sync",
+  "advice": "Wasza energia jest zsynchronizowana! Świetny dzień na wspólne aktywności. 🏃‍♂️"
+ },
+ {
+  "user": [
+   -0.3957871487364173,
+   0.8683854606933892,
+   -0.21890339069068432
+  ],
+  "partner": [
+   0.3057465343736112,
+   -0.7777358191087842,
+   -0.2421661033295095
+  ],
+  "physSync": 64.92331584449857,
+  "emoSync": 17.69393600989133,
+  "intSync": 98.83686436805874,
+  "overall": 54,
+  "physical": 65,
+  "emotional": 18,
+  "intellectual": 99,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   0.9389913938939571,
+   -0.877942715305835,
+   0.8739415006712079
+  ],
+  "partner": [
+   -0.051459311973303556,
+   -0.8391264174133539,
+   -0.4278090172447264
+  ],
+  "physSync": 50.477464706636965,
+  "emoSync": 98.05918510537595,
+  "intSync": 34.912474104203284,
+  "overall": 67,
+  "physical": 50,
+  "emotional": 98,
+  "intellectual": 35,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   -0.33229333255439997,
+   -0.0872341669164598,
+   -0.9795506745576859
+  ],
+  "partner": [
+   -0.11443218635395169,
+   -0.7628548657521605,
+   -0.5232801693491638
+  ],
+  "physSync": 89.10694268997759,
+  "emoSync": 66.21896505821496,
+  "intSync": 77.1864747395739,
+  "overall": 75,
+  "physical": 89,
+  "emotional": 66,
+  "intellectual": 77,
+  "type": "sync",
+  "advice": "Wasza energia jest zsynchronizowana! Świetny dzień na wspólne aktywności. 🏃‍♂️"
+ },
+ {
+  "user": [
+   -0.45174997113645077,
+   -0.6485699550248682,
+   -0.4322518231347203
+  ],
+  "partner": [
+   0.5062326253391802,
+   -0.6671713553369045,
+   -0.9281062153168023
+  ],
+  "physSync": 52.10087017621845,
+  "emoSync": 99.06992998439819,
+  "intSync": 75.2072803908959,
+  "overall": 80,
+  "physical": 52,
+  "emotional": 99,
+  "intellectual": 75,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ },
+ {
+  "user": [
+   0.47408574540168047,
+   0.04750067787244916,
+   0.5379715841263533
+  ],
+  "partner": [
+   -0.37679613614454865,
+   -0.11638005916029215,
+   0.9541621604003012
+  ],
+  "physSync": 57.455905922688544,
+  "emoSync": 91.80596314836293,
+  "intSync": 79.1904711863026,
+  "overall": 79,
+  "physical": 57,
+  "emotional": 92,
+  "intellectual": 79,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ },
+ {
+  "user": [
+   -0.7578237429261208,
+   -0.0935581554658711,
+   0.5834091166034341
+  ],
+  "partner": [
+   -0.46804972318932414,
+   0.006644235923886299,
+   -0.03106284746900201
+  ],
+  "physSync": 85.51129901316017,
+  "emoSync": 94.98988043051213,
+  "intSync": 69.2764017963782,
+  "overall": 85,
+  "physical": 86,
+  "emotional": 95,
+  "intellectual": 69,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ },
+ {
+  "user": [
+   -0.4140473948791623,
+   0.2321747080422938,
+   -0.9219599552452564
+  ],
+  "partner": [
+   -0.9223686647601426,
+   0.7704260693863034,
+   -0.07471881760284305
+  ],
+  "physSync": 74.58393650595099,
+  "emoSync": 73.08743193279952,
+  "intSync": 57.63794311787933,
+  "overall": 69,
+  "physical": 75,
+  "emotional": 73,
+  "intellectual": 58,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   -0.8677344266325235,
+   0.8256454444490373,
+   -0.04444252047687769
+  ],
+  "partner": [
+   0.7857391708530486,
+   0.9655001163482666,
+   -0.44669945584610105
+  ],
+  "physSync": 17.326320125721395,
+  "emoSync": 93.00726640503854,
+  "intSync": 79.88715323153883,
+  "overall": 70,
+  "physical": 17,
+  "emotional": 93,
+  "intellectual": 80,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ },
+ {
+  "user": [
+   0.06039371434599161,
+   -0.6804922926239669,
+   0.03875603713095188
+  ],
+  "partner": [
+   0.8648413433693349,
+   0.5092077879235148,
+   -0.43467066576704383
+  ],
+  "physSync": 59.777618548832834,
+  "emoSync": 40.51499597262591,
+  "intSync": 76.32866485510021,
+  "overall": 56,
+  "physical": 60,
+  "emotional": 41,
+  "intellectual": 76,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   0.28220005705952644,
+   -0.4778870460577309,
+   -0.46320329885929823
+  ],
+  "partner": [
+   -0.9988978276960552,
+   0.06549016945064068,
+   0.4964407733641565
+  ],
+  "physSync": 35.94510576222092,
+  "emoSync": 72.83113922458142,
+  "intSync": 52.017796388827264,
+  "overall": 57,
+  "physical": 36,
+  "emotional": 73,
+  "intellectual": 52,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   0.5504199182614684,
+   0.18658011639490724,
+   -0.2596218213438988
+  ],
+  "partner": [
+   -0.5400365074165165,
+   0.20462846849113703,
+   -0.32634884444996715
+  ],
+  "physSync": 45.47717871610075,
+  "emoSync": 99.09758239518851,
+  "intSync": 96.66364884469658,
+  "overall": 85,
+  "physical": 45,
+  "emotional": 99,
+  "intellectual": 97,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ },
+ {
+  "user": [
+   0.661827864125371,
+   -0.5023307711817324,
+   0.34523467253893614
+  ],
+  "partner": [
+   0.21544381836429238,
+   0.09389876946806908,
+   -0.6786152166314423
+  ],
+  "physSync": 77.68079771194607,
+  "emoSync": 70.18852296750993,
+  "intSync": 48.80750554148108,
+  "overall": 66,
+  "physical": 78,
+  "emotional": 70,
+  "intellectual": 49,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   0.4786724941805005,
+   0.8055117432959378,
+   0.9066456165164709
+  ],
+  "partner": [
+   0.7669680244289339,
+   -0.07700148317962885,
+   -0.42165362602099776
+  ],
+  "physSync": 85.58522348757833,
+  "emoSync": 55.87433867622167,
+  "intSync": 33.585037873126566,
+  "overall": 57,
+  "physical": 86,
+  "emotional": 56,
+  "intellectual": 34,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   -0.5297166556119919,
+   -0.1440466050989926,
+   -0.7032164549455047
+  ],
+  "partner": [
+   -0.8975322204641998,
+   -0.3471322264522314,
+   0.20290054520592093
+  ],
+  "physSync": 81.6092217573896,
+  "emoSync": 89.84571893233806,
+  "intSync": 54.69414999242872,
+  "overall": 77,
+  "physical": 82,
+  "emotional": 90,
+  "intellectual": 55,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ },
+ {
+  "user": [
+   -0.4978551687672734,
+   0.09734359988942742,
+   -0.6722581051290035
+  ],
+  "partner": [
+   0.04969609109684825,
+   0.8581689270213246,
+   0.1053861160762608
+  ],
+  "physSync": 72.62243700679392,
+  "emoSync": 61.95873364340514,
+  "intSync": 61.11778893973678,
+  "overall": 64,
+  "physical": 73,
+  "emotional": 62,
+  "intellectual": 61,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   0.29699778370559216,
+   0.7080584964714944,
+   -0.45902484003454447
+  ],
+  "partner": [
+   0.15027744555845857,
+   -0.9627958610653877,
+   0.6914960811845958
+  ],
+  "physSync": 92.66398309264332,
+  "emoSync": 16.457282123155892,
+  "intSync": 42.473953939042985,
+  "overall": 43,
+  "physical": 93,
+  "emotional": 16,
+  "intellectual": 42,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   0.9866697350516915,
+   0.9128728625364602,
+   0.17364944703876972
+  ],
+  "partner": [
+   0.31796815386042,
+   0.41344046127051115,
+   0.4559322432614863
+  ],
+  "physSync": 66.56492094043642,
+  "emoSync": 75.02837993670255,
+  "intSync": 85.88586018886417,
+  "overall": 76,
+  "physical": 67,
+  "emotional": 75,
+  "intellectual": 86,
+  "type": "sync",
+  "advice": "Jesteście na tej samej fali. Wykorzystajcie tę harmonię! 🌊"
+ },
+ {
+  "user": [
+   -0.9106492288410664,
+   0.06449926970526576,
+   -0.8809578968212008
+  ],
+  "partner": [
+   0.028929636348038912,
+   0.5750781651586294,
+   0.4549966133199632
+  ],
+  "physSync": 53.021056740544736,
+  "emoSync": 74.47105522733182,
+  "intSync": 33.2022744929418,
+  "overall": 57,
+  "physical": 53,
+  "emotional": 74,
+  "intellectual": 33,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   -0.29007764253765345,
+   0.9841909580864012,
+   0.9266447126865387
+  ],
+  "partner": [
+   -0.23747949348762631,
+   -0.08176154550164938,
+   0.3356098127551377
+  ],
+  "physSync": 97.37009254749864,
+  "emoSync": 46.70237482059747,
+  "intSync": 70.44825500342995,
+  "overall": 66,
+  "physical": 97,
+  "emotional": 47,
+  "intellectual": 70,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   -0.6042878087610006,
+   0.30725804110988975,
+   -0.8369856150820851
+  ],
+  "partner": [
+   0.991191437933594,
+   -0.5996376387774944,
+   0.6314498367719352
+  ],
+  "physSync": 20.22603766527027,
+  "emoSync": 54.65521600563079,
+  "intSync": 26.578227407298982,
+  "overall": 38,
+  "physical": 20,
+  "emotional": 55,
+  "intellectual": 27,
+  "type": "complement",
+  "advice": "Różne fazy oznaczają szansę na wzajemne wsparcie. Bądźcie cierpliwi. 🌱"
+ },
+ {
+  "user": [
+   0.5116887511685491,
+   -0.8093252251856029,
+   0.4016838800162077
+  ],
+  "partner": [
+   -0.6674800761975348,
+   -0.8016967559233308,
+   0.1794826635159552
+  ],
+  "physSync": 41.04155863169581,
+  "emoSync": 99.6185765368864,
+  "intSync": 88.88993917498738,
+  "overall": 82,
+  "physical": 41,
+  "emotional": 100,
+  "intellectual": 89,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ },
+ {
+  "user": [
+   -0.14737515896558762,
+   0.835658750962466,
+   -0.6454182555899024
+  ],
+  "partner": [
+   -0.3497498366050422,
+   -0.8746390622109175,
+   -0.1128906817175448
+  ],
+  "physSync": 89.88126611802727,
+  "emoSync": 14.485109341330826,
+  "intSync": 73.37362130638212,
+  "overall": 51,
+  "physical": 90,
+  "emotional": 14,
+  "intellectual": 73,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   -0.8898499505594373,
+   0.9831809983588755,
+   -0.17657074704766273
+  ],
+  "partner": [
+   0.04940643487498164,
+   0.7181462245061994,
+   0.8164821271784604
+  ],
+  "physSync": 53.037180728279054,
+  "emoSync": 86.74826130736619,
+  "intSync": 50.347356288693845,
+  "overall": 67,
+  "physical": 53,
+  "emotional": 87,
+  "intellectual": 50,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   -0.615122327581048,
+   -0.020180898252874613,
+   0.8624715795740485
+  ],
+  "partner": [
+   -0.021873561199754477,
+   -0.6173200756311417,
+   -0.22675398038700223
+  ],
+  "physSync": 70.33756168093532,
+  "emoSync": 70.14304113108665,
+  "intSync": 45.53872200194746,
+  "overall": 63,
+  "physical": 70,
+  "emotional": 70,
+  "intellectual": 46,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   0.8029322708025575,
+   -0.6898064273409545,
+   0.4286662433296442
+  ],
+  "partner": [
+   0.15081422170624137,
+   0.5145215271040797,
+   0.41703886399045587
+  ],
+  "physSync": 67.3940975451842,
+  "emoSync": 39.78360227774829,
+  "intSync": 99.41863103304058,
+  "overall": 65,
+  "physical": 67,
+  "emotional": 40,
+  "intellectual": 99,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   0.08721965923905373,
+   -0.22456916840747,
+   -0.522907498292625
+  ],
+  "partner": [
+   -0.1314595858566463,
+   0.7049879115074873,
+   0.4755379459820688
+  ],
+  "physSync": 89.066037745215,
+  "emoSync": 53.522146004252136,
+  "intSync": 50.077727786265314,
+  "overall": 61,
+  "physical": 89,
+  "emotional": 54,
+  "intellectual": 50,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   -0.7283282512798905,
+   -0.11032571410760283,
+   0.5628609880805016
+  ],
+  "partner": [
+   0.658320642542094,
+   -0.36033667530864477,
+   -0.9323321762494743
+  ],
+  "physSync": 30.667555308900774,
+  "emoSync": 87.4994519399479,
+  "intSync": 25.240341783501208,
+  "overall": 55,
+  "physical": 31,
+  "emotional": 87,
+  "intellectual": 25,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   0.2564642895013094,
+   -0.30638188729062676,
+   0.16119351517409086
+  ],
+  "partner": [
+   -0.89201890071854,
+   0.71141741797328,
+   0.5497879195027053
+  ],
+  "physSync": 42.57584048900753,
+  "emoSync": 49.110034736804664,
+  "intSync": 80.57027978356928,
+  "overall": 57,
+  "physical": 43,
+  "emotional": 49,
+  "intellectual": 81,
+  "type": "mixed",
+  "advice": "Dziś mieszanka energii. Komunikacja jest kluczem do zrozumienia. 💬"
+ },
+ {
+  "user": [
+   0.20884618628770113,
+   0.17036648141220212,
+   -0.2603914085775614
+  ],
+  "partner": [
+   0.46277338033542037,
+   0.33303876128047705,
+   -0.18374366825446486
+  ],
+  "physSync": 87.30364029761404,
+  "emoSync": 91.86638600658625,
+  "intSync": 96.16761298384517,
+  "overall": 92,
+  "physical": 87,
+  "emotional": 92,
+  "intellectual": 96,
+  "type": "sync",
+  "advice": "Dziś wasza więź emocjonalna jest wyjątkowo silna. Idealny dzień na głębokie rozmowy. 💕"
+ }
+]

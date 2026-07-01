@@ -1,0 +1,16 @@
+{
+  "name": "aimy-bio-open-biorhythms",
+  "version": "1.0.0",
+  "description": "Open reference implementation and specification of dr. Jerzy Sikora's biorhythm method — the verified engine behind aimy.bio.",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://aimy.bio",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fiedoruk/aimy-bio-open-biorhythms"
+  },
+  "keywords": ["biorhythm", "biorhythms", "sikora", "wellness", "aimy.bio"],
+  "scripts": {
+    "test": "node src/engine.test.mjs"
+  }
+}
