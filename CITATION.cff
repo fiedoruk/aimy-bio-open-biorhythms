@@ -4,9 +4,9 @@ title: "aimy-bio-open-biorhythms — open reference implementation of dr. Jerzy 
 abstract: >-
   The verified biorhythm engine behind aimy.bio: a faithful implementation of
   dr. Jerzy Sikora's discrete-phase biorhythm method (state symbols +, -, X, 0),
-  reproduced and validated against reference charts from 1983, 2000 and 2001,
-  pinned by 663 Sikora + 86 BioMatch golden vectors. A tribute to the work of
-  dr. Jerzy Sikora.
+  reproduced from his 1983 book "Biodiagram prawdę Ci powie" (KAW) and validated
+  against his own worked examples, pinned by 741 Sikora + 211 BioMatch golden
+  vectors. A tribute to the work of dr. Jerzy Sikora.
 type: software
 authors:
   - family-names: "Fiedoruk"

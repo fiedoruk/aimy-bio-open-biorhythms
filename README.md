@@ -15,8 +15,10 @@ Cieszyn), the father of Polish biorhythmics. It is privacy-first and free: there
 telemetry here, no account, and no dependency to install — just math you can read line by line
 and verify yourself.
 
-Reconstructed from dr. Sikora's own reference printouts (1983, 2000, 2001) and validated
-against them digit by digit — then pinned by 663 + 86 golden vectors so it can't drift.
+Reconstructed from dr. Sikora's own book, *Biodiagram prawdę Ci powie* (KAW, 1983), and
+validated digit by digit against his own worked examples — e.g. the poet Mickiewicz's
+biorhythm (F22/P15/I1) and the Goethe+Schiller biopowinowactwo (compatibility) match
+(F100/P86/I82) — then pinned by 741 + 211 golden vectors so it can't drift.
 
 ## See it live
 
@@ -29,7 +31,7 @@ No trust required — clone it and run the same golden-vector suite that CI runs
 ```bash
 git clone https://github.com/fiedoruk/aimy-bio-open-biorhythms
 cd aimy-bio-open-biorhythms
-npm test   # 663 Sikora + 86 BioMatch golden vectors -> ALL GREEN
+npm test   # 741 Sikora + 211 BioMatch golden vectors -> ALL GREEN
 ```
 
 Zero dependencies — plain Node.js, nothing to install first.
@@ -75,24 +77,24 @@ yourself with `npm test`.
 
 ```json
 {
-  "daysAlive": 13195,
+  "daysAlive": 13197,
   "physical": {
     "symbol": "-",
-    "day": 16,
+    "day": 18,
     "length": 23,
-    "percent": 5
+    "percent": 9
   },
   "emotional": {
     "symbol": "+",
-    "day": 7,
+    "day": 9,
     "length": 28,
-    "percent": 88
+    "percent": 82
   },
   "intellectual": {
     "symbol": "-",
-    "day": 28,
+    "day": 30,
     "length": 33,
-    "percent": 29
+    "percent": 30
   }
 }
 ```
@@ -105,7 +107,7 @@ Full specification → [`docs/method.md`](docs/method.md)
 - [`docs/philosophy.md`](docs/philosophy.md) — why this exists and why it's open.
 - Polish / po polsku: [`docs/pl/method.md`](docs/pl/method.md) · [`docs/pl/philosophy.md`](docs/pl/philosophy.md)
 - [`src/engine.js`](src/engine.js) — the reference implementation, zero dependencies.
-- [`data/README.md`](data/README.md) — data dictionary for the 663 + 86 golden vectors that pin correctness.
+- [`data/README.md`](data/README.md) — data dictionary for the 741 + 211 golden vectors that pin correctness.
 
 ## Cite this repository
 

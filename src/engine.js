@@ -1,18 +1,26 @@
 /**
- * aimy.bio — Silnik biorytmów wg metody dr. Jerzego Sikory
- * Port 1:1 z kanonicznego źródła TS (aimy-bio-web-source/src/lib/biorhythm.ts),
- * zwalidowanego na plikach wzorcowych z lat 1983, 2000, 2001.
- * Weryfikacja: tools/test-engine.mjs vs 663 golden-vectory (sikora.json).
+ * aimy.bio — Silnik biorytmów wg metody dr. Jerzego Sikory (reference implementation)
+ * Zrekonstruowany ze ŹRÓDŁA PIERWOTNEGO: J. Sikora, „Biodiagram prawdę Ci powie", KAW 1983.
+ * To jest publiczna, samodzielna implementacja referencyjna silnika stojącego za aimy.bio.
+ * Weryfikacja: src/engine.test.mjs vs golden (data/golden/sikora.json — wektory regresyjne tabeli
+ * faz, data/golden/biomatch.json — pary biopowinowactwa) + KOTWICE ZE ŹRÓDŁA wpisane wprost w
+ * teście (ręczne przykłady autora: Mickiewicz, BioMatch Goethe+Schiller, Morcinek+Teresa).
  *
- * METODA: dyskretny cykl z symbolami stanów (+, -, X, 0)
- *   +  Wyż        — faza aktywna
- *   -  Niż        — faza pasywna
- *   X  Krytyczny  — przejście wyż→niż (połowa cyklu)
- *   0  Zerowy     — przejście niż→wyż (regeneracja, koniec cyklu)
+ * METODA: dyskretny cykl ze stanami (+, -, X, 0). Dzień 1 = ZEROWY (w chwili urodzenia wszystkie
+ * trzy cykle startują od zera). X = środek cyklu (przejście wyż→niż). Tabela faz (bioliczba 1..N):
+ *   F(23): 0=1 · + 2–11 · X 12 · − 13–23
+ *   P(28): 0=1 · + 2–13 · X 14–15 (DWA dni krytyczne) · − 16–28
+ *   I(33): 0=1 · + 2–16 · X 17 · − 18–33
+ * (Zgodne z tabelą „rozrzutu" i głębią niżu z książki; „X=środek" ~połowa cyklu.)
  *
- * UWAGA API: eksporty CYCLE_TYPES i generateBiorhythmData nie mają dziś
- * konsumentów w site/ — utrzymywane świadomie dla parytetu powierzchni API
- * z kanonicznym źródłem TS (nie usuwać bez zmiany w kanonie).
+ * DAY-COUNT: dni_przeżyte = interwał(target−urodzenie) + 1 (INKLUZYWNIE: dzień urodzenia = 1)
+ *   + (ur.≤12:00 → +1). Sikora sam jest ±1 niespójny w książce (metoda pamięciowa dolicza
+ *   inkluzywny dzień, tabelowa nie) — przyjmujemy konwencję pamięciową (odtwarza flagowy przykład
+ *   Mickiewicza), resztę traktujemy jako ±1 „rozrzut", który autor jawnie dopuszcza.
+ *
+ * UWAGA API: eksporty CYCLE_TYPES i generateBiorhythmData nie mają dziś konsumentów w bin/cli.mjs
+ * ani examples/ w tym repo — utrzymywane świadomie dla parytetu powierzchni API z aplikacją
+ * aimy.bio (źródło prawdy metody).
  */
 
 export const CYCLES = Object.freeze({
@@ -29,33 +37,38 @@ const CYCLE_LENGTH = Object.freeze({
   I: CYCLES.INTELLECTUAL,
 });
 
-/** Korekta pory urodzenia wg metody Sikory. */
+/**
+ * Korekta pory urodzenia wg Sikory = liczba dodawana do INTERWAŁU (target−urodzenie):
+ *   +1 inkluzywnie (dzień urodzenia liczony jako 1) oraz +1 dodatkowo, gdy ur. przed południem.
+ *   AM (przed 12:00) = +2 · PM (po 12:00) = +1 · nieznana = +1 (baza jak PM).
+ */
 export const BIRTH_TIME_CORRECTION = Object.freeze({
-  AM: -1,
-  PM: -2,
-  unknown: -1,
+  AM: 2,
+  PM: 1,
+  unknown: 1,
 });
 
 const MS_PER_DAY = 24 * 60 * 60 * 1000;
 
 /**
- * Dni przeżyte z korektą Sikory.
- * FORMULA: (DataBieżąca - DataUrodzenia) + KOREKTA(pora urodzenia)
- */
-/**
  * Północ UTC zbudowana z LOKALNYCH komponentów daty. Różnica dwóch takich wartości
  * jest dokładną wielokrotnością doby — odporna na DST (czas letni/zimowy),
  * w przeciwieństwie do różnicy lokalnych północy (setHours), gdzie doba 23/25 h
- * gubiła/dodawała dzień przy Math.floor. Parytet z kanonem TS.
+ * gubiła/dodawała dzień przy Math.floor.
  */
 function utcMidnight(date) {
   const d = new Date(date);
   return Date.UTC(d.getFullYear(), d.getMonth(), d.getDate());
 }
 
+/**
+ * Dni przeżyte wg Sikory (inkluzywnie + korekta pory urodzenia).
+ * FORMULA: (target − urodzenie) w dniach + KOREKTA(pora urodzenia)
+ * W chwili urodzenia (interwał 0, nieznana pora) = 1 → dzień 1 = zerowy każdego cyklu.
+ */
 export function daysSinceBirth(birthDate, targetDate = new Date(), birthTime = 'unknown') {
-  const rawDays = Math.round((utcMidnight(targetDate) - utcMidnight(birthDate)) / MS_PER_DAY);
-  return rawDays + BIRTH_TIME_CORRECTION[birthTime];
+  const interval = Math.round((utcMidnight(targetDate) - utcMidnight(birthDate)) / MS_PER_DAY);
+  return interval + BIRTH_TIME_CORRECTION[birthTime];
 }
 
 /** Dzień w cyklu: 1..długość cyklu (poprawny także dla ujemnych daysAlive). */
@@ -67,36 +80,36 @@ export function getDayOfCycle(type, daysAlive) {
 }
 
 /**
- * Symbol Sikory dla cyklu i liczby dni przeżytych.
- * F (23): + 1-10 · X 11 · - 12-21 · 0 22-23
- * P (28): + 1-12 · X 13-14 (dwa dni krytyczne!) · - 15-26 · 0 27-28
- * I (33): + 1-15 · X 16 · - 17-31 · 0 32-33
+ * Symbol Sikory dla cyklu i liczby dni przeżytych (tabela faz — patrz nagłówek pliku).
+ * F(23): 0=1 · + 2–11 · X 12 · − 13–23
+ * P(28): 0=1 · + 2–13 · X 14–15 · − 16–28
+ * I(33): 0=1 · + 2–16 · X 17 · − 18–33
  */
 export function getSikoraSymbol(type, daysAlive) {
-  const dayOfCycle = getDayOfCycle(type, daysAlive);
+  const d = getDayOfCycle(type, daysAlive);
 
   if (type === 'F') {
-    if (dayOfCycle <= 10) return '+';
-    if (dayOfCycle === 11) return 'X';
-    if (dayOfCycle <= 21) return '-';
-    return '0';
+    if (d === 1) return '0';
+    if (d <= 11) return '+';
+    if (d === 12) return 'X';
+    return '-';
   }
   if (type === 'P') {
-    if (dayOfCycle <= 12) return '+';
-    if (dayOfCycle <= 14) return 'X';
-    if (dayOfCycle <= 26) return '-';
-    return '0';
+    if (d === 1) return '0';
+    if (d <= 13) return '+';
+    if (d <= 15) return 'X';
+    return '-';
   }
   // I
-  if (dayOfCycle <= 15) return '+';
-  if (dayOfCycle === 16) return 'X';
-  if (dayOfCycle <= 31) return '-';
-  return '0';
+  if (d === 1) return '0';
+  if (d <= 16) return '+';
+  if (d === 17) return 'X';
+  return '-';
 }
 
 /**
  * Procent 0-100 wg pozycji w fazie (płynna wizualizacja szanująca fazy Sikory).
- * Port 1:1 z TS calculateDetailedPercentage.
+ * Wyż: F 2–11, P 2–13, I 2–16. Niż: F 13–23, P 16–28, I 18–33. X i 0 = strefa przejścia (50).
  */
 export function calculateDetailedPercentage(type, daysAlive) {
   const symbol = getSikoraSymbol(type, daysAlive);
@@ -104,14 +117,14 @@ export function calculateDetailedPercentage(type, daysAlive) {
 
   if (symbol === '+') {
     const highPhaseLength = type === 'F' ? 10 : type === 'P' ? 12 : 15;
-    const progress = dayOfCycle / highPhaseLength;
+    const progress = (dayOfCycle - 1) / highPhaseLength; // wyż zaczyna się od dnia 2
     if (progress <= 0.5) return 55 + (progress * 2) * 40;
     return 95 - ((progress - 0.5) * 2) * 40;
   }
 
   if (symbol === '-') {
-    const lowPhaseStart = type === 'F' ? 12 : type === 'P' ? 15 : 17;
-    const lowPhaseEnd = type === 'F' ? 21 : type === 'P' ? 26 : 31;
+    const lowPhaseStart = type === 'F' ? 13 : type === 'P' ? 16 : 18;
+    const lowPhaseEnd = type === 'F' ? 23 : type === 'P' ? 28 : 33;
     const lowPhaseLength = lowPhaseEnd - lowPhaseStart + 1;
     const positionInLow = dayOfCycle - lowPhaseStart + 1;
     const progress = positionInLow / lowPhaseLength;
@@ -177,7 +190,7 @@ export function getBiorhythmsFor(birthDate, targetDate = new Date(), birthTime =
 
 /**
  * Najbliższe dni kluczowe danego cyklu (od jutra w przód):
- * następny X (krytyczny), następny 0 (zerowy), początek następnego wyżu (dzień 1).
+ * następny X (krytyczny), następny 0 (zerowy), początek następnego wyżu (dzień 2 = pierwszy dzień „+").
  */
 export function findNextKeyDays(type, daysAliveToday, fromDate = new Date()) {
   const length = CYCLE_LENGTH[type];
@@ -189,15 +202,15 @@ export function findNextKeyDays(type, daysAliveToday, fromDate = new Date()) {
     date.setDate(date.getDate() + offset);
     if (!result.critical && symbol === 'X') result.critical = { date, inDays: offset };
     if (!result.zero && symbol === '0') result.zero = { date, inDays: offset };
-    if (!result.highStart && dayOfCycle === 1) result.highStart = { date, inDays: offset };
+    if (!result.highStart && dayOfCycle === 2) result.highStart = { date, inDays: offset };
     if (result.critical && result.zero && result.highStart) break;
   }
   return result;
 }
 
 /**
- * Usuwa emoji/piktogramy ze stringa (port 1:1 z kanonu TS lib/text.ts).
- * GUI pokazuje teksty bez emoji (zasada: tylko ikony SVG); teksty źródłowe
+ * Usuwa emoji/piktogramy ze stringa.
+ * GUI aimy.bio pokazuje teksty bez emoji (zasada: tylko ikony SVG); teksty źródłowe
  * w i18n zostają kanoniczne (parytet z golden-vectorami).
  */
 export function stripEmoji(input) {
@@ -207,9 +220,9 @@ export function stripEmoji(input) {
     .trim();
 }
 
-// ── BioMatch — dopasowanie partnerskie (port 1:1 z BioMatch.tsx) ──────────────
+// ── BioMatch — dopasowanie partnerskie (biopowinowactwo Sikory) ────────────────
 
-/** Surowe wartości sinus (-1..1) trzech cykli dla daysAlive — wejście BioMatch. */
+/** Surowe wartości sinus (-1..1) trzech cykli dla daysAlive — do gładkiej krzywej wykresu. */
 export function getRawBiorhythms(daysAlive) {
   return {
     physical: calculateBiorhythm(daysAlive, CYCLES.PHYSICAL),
@@ -219,17 +232,26 @@ export function getRawBiorhythms(daysAlive) {
 }
 
 /**
- * Kompatybilność biorytmów dwóch osób (algorytm v1.0 z kanonu TS).
- * sync per cykl = (1 - |rawA - rawB| / 2) * 100  → 100% identyczne fazy, 0% opozycja.
- * Ogólny = 0.25·fizyczny + 0.45·emocjonalny + 0.30·intelektualny
- * (emocje ważą najwięcej — wymiar partnerski/miłosny).
+ * Biopowinowactwo Sikory dwóch osób (wejście = dni przeżyte każdej osoby na TEN SAM dzień).
+ * sync per cykl = (1 − foldedDiff / (N/2)) × 100, foldedDiff = cykliczna różnica bioliczb
+ *   (min(|dA−dB|, N−|dA−dB|)) — 100% = ta sama faza (ten sam dzień cyklu), 0% = opozycja (pół cyklu).
+ * (Zweryfikowane na książce: Goethe+Schiller F100/P86/I82, Morcinek+Teresa F65/P7/I100 — patrz
+ *   kotwice w src/engine.test.mjs.)
+ * Ogólny = 0.25·fizyczny + 0.45·emocjonalny + 0.30·intelektualny (emocje ważą najwięcej —
+ *   Sikora: dla par kluczowe F i P; wzoru „overall" nie podał — to świadoma operacjonalizacja aimy.bio).
  * Typ: ≥70 sync · ≤40 complement (opozycja = komplementarność, nie zło) · inaczej mixed.
- * adviceKey wybierany na NIEZAOKRĄGLONYCH sync (jak w TS); teksty porad w i18n.
+ * Zwraca też `drivingCycle` = cykl najdalej od zgodności (najniższy sync) — pomocny przy poradach.
  */
-export function calculateBioMatch(rawA, rawB) {
-  const physicalSync = (1 - Math.abs(rawA.physical - rawB.physical) / 2) * 100;
-  const emotionalSync = (1 - Math.abs(rawA.emotional - rawB.emotional) / 2) * 100;
-  const intellectualSync = (1 - Math.abs(rawA.intellectual - rawB.intellectual) / 2) * 100;
+export function calculateBioMatch(daysA, daysB) {
+  const syncOf = (type) => {
+    const N = CYCLE_LENGTH[type];
+    const diff = Math.abs(getDayOfCycle(type, daysA) - getDayOfCycle(type, daysB));
+    const folded = Math.min(diff, N - diff);
+    return Math.max(0, (1 - folded / (N / 2)) * 100);
+  };
+  const physicalSync = syncOf('F');
+  const emotionalSync = syncOf('P');
+  const intellectualSync = syncOf('I');
 
   const overall = Math.round(physicalSync * 0.25 + emotionalSync * 0.45 + intellectualSync * 0.30);
   const type = overall >= 70 ? 'sync' : overall <= 40 ? 'complement' : 'mixed';
@@ -245,6 +267,10 @@ export function calculateBioMatch(rawA, rawB) {
     adviceKey = 'matchAdviceMixed';
   }
 
+  const drivingCycle =
+    physicalSync <= emotionalSync && physicalSync <= intellectualSync ? 'physical'
+      : emotionalSync <= intellectualSync ? 'emotional' : 'intellectual';
+
   return {
     overall,
     physical: Math.round(physicalSync),
@@ -252,18 +278,19 @@ export function calculateBioMatch(rawA, rawB) {
     intellectual: Math.round(intellectualSync),
     type,
     adviceKey,
+    drivingCycle,
   };
 }
 
-/** Specyfikacja metody — referencja/parytet z TS (tabela faz w index.html jest statyczna dla SEO/no-JS). */
+/** Specyfikacja metody — parytet z tabelą faz (przydatna do własnych statycznych renderów bez importu silnika). */
 export const SIKORA_ALGORITHM = Object.freeze({
-  version: '1.0',
+  version: '2.0',
   status: 'ZWALIDOWANY',
-  source: 'Pliki wzorcowe z lat 1983, 2000, 2001',
+  source: 'J. Sikora, „Biodiagram prawdę Ci powie", KAW 1983 (kotwice: ręczne przykłady autora)',
   author: 'dr Jerzy Sikora',
   phases: Object.freeze({
-    F: Object.freeze({ length: 23, high: [1, 10], critical: [11, 11], low: [12, 21], zero: [22, 23] }),
-    P: Object.freeze({ length: 28, high: [1, 12], critical: [13, 14], low: [15, 26], zero: [27, 28] }),
-    I: Object.freeze({ length: 33, high: [1, 15], critical: [16, 16], low: [17, 31], zero: [32, 33] }),
+    F: Object.freeze({ length: 23, zero: [1, 1], high: [2, 11], critical: [12, 12], low: [13, 23] }),
+    P: Object.freeze({ length: 28, zero: [1, 1], high: [2, 13], critical: [14, 15], low: [16, 28] }),
+    I: Object.freeze({ length: 33, zero: [1, 1], high: [2, 16], critical: [17, 17], low: [18, 33] }),
   }),
 });

@@ -16,7 +16,7 @@ mirror** of the canonical implementation that powers [aimy.bio](https://aimy.bio
 developed independently in this repository. PRs that change the math will be redirected to the
 canonical source rather than merged here.
 
-Whatever you change, `npm test` must stay **ALL GREEN** (663 Sikora + 86 BioMatch golden
+Whatever you change, `npm test` must stay **ALL GREEN** (741 Sikora + 211 BioMatch golden
 vectors). A PR that breaks the golden suite cannot be merged.
 
 ## DCO (Developer Certificate of Origin)

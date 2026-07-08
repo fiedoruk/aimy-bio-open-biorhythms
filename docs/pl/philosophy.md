@@ -2,11 +2,13 @@
 
 **Po co istnieje aimy.bio.** To hołd dla **dr. Jerzego A. Sikory** — polskiego badacza
 urodzonego w 1930 r. w Cieszynie, nazywanego ojcem polskiej biorytmiki, autora książki
-*Biodiagram prawdę Ci powie* (1983) — który opisał biorytmy poprzez dyskretne fazy i korektę
-pory urodzenia, zamiast zwykłej ciągłej fali sinusoidalnej. Ta metoda została odtworzona na
-podstawie oryginalnych wydruków referencyjnych dr. Sikory z lat **1983, 2000 i 2001** i
-zweryfikowana względem nich cyfra po cyfrze. aimy.bio istnieje po to, by tę pracę utrzymać przy
-życiu, dostępną i darmową — nie po to, by ją zmonetyzować, i nie po to, by ją wymyślać na nowo.
+*Biodiagram prawdę Ci powie* (KAW, 1983) — który opisał biorytmy poprzez dyskretne fazy i
+korektę pory urodzenia, zamiast zwykłej ciągłej fali sinusoidalnej. Ta metoda została
+odtworzona na podstawie tej właśnie książki i zweryfikowana cyfra po cyfrze względem własnych
+przykładów obliczeniowych dr. Sikory — m.in. biorytmu poety Mickiewicza (F22/P15/I1) oraz
+dopasowania (biopowinowactwa) Goethe+Schiller (F100/P86/I82). aimy.bio istnieje po to, by tę
+pracę utrzymać przy życiu, dostępną i darmową — nie po to, by ją zmonetyzować, i nie po to, by
+ją wymyślać na nowo.
 
 ## Czym jest
 
@@ -40,7 +42,7 @@ aimy.bio to darmowa aplikacja webowa zbudowana na metodzie opisanej w
 ## Trzy filary
 
 1. **Wierność metodzie.** Silnik w tym repozytorium jest portem 1:1 kanonicznej
-   implementacji, zweryfikowanym względem 663 wektorów fazowych Sikory i 86 wektorów
+   implementacji, zweryfikowanym względem 741 wektorów fazowych Sikory i 211 wektorów
    zgodności BioMatch. Fala sinusoidalna, którą można zobaczyć na wykresie, jest jedynie
    wizualnym udogodnieniem — nigdy nie zastępuje dyskretnych symboli fazowych metody jako
    źródła prawdy o danym dniu.

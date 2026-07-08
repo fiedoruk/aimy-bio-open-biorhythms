@@ -3,8 +3,10 @@
 This document specifies, in full and verifiable detail, the biorhythm method developed by
 **dr. Jerzy Sikora**: a **discrete-phase** model — four named states per cycle, not a raw
 continuous sine wave — built to describe the physical, psychical/emotional, and intellectual
-rhythms of a person's life. The method was reconstructed and validated against dr. Sikora's
-own reference printouts from **1983, 2000, and 2001**, and is reproduced here as a tribute to
+rhythms of a person's life. The method was reconstructed from dr. Sikora's own book,
+*Biodiagram prawdę Ci powie* (KAW, 1983), and validated digit by digit against his own worked
+examples — e.g. the poet Mickiewicz's biorhythm (F22/P15/I1) and the Goethe+Schiller
+biopowinowactwo (compatibility) match (F100/P86/I82) — and is reproduced here as a tribute to
 that work and as a citable, machine-readable reference for anyone building on it. The exact
 math below is the same math that runs the live application: **https://aimy.bio**.
 
@@ -31,13 +33,18 @@ correction for birth time:
 daysAlive = round( UTCmidnight(targetDate) − UTCmidnight(birthDate) ) / dayMs + correction
 ```
 
-where `correction` depends on the birth-time bucket:
+where `correction` depends on the birth-time bucket. The count is inclusive — the day of birth
+itself is counted as day 1 of life — with one further day added when the birth happened before
+noon:
 
 | Birth time | Correction |
 |---|---|
-| AM | −1 |
-| PM | −2 |
-| unknown | −1 |
+| AM | +2 |
+| PM | +1 |
+| unknown | +1 |
+
+In practice this means a person born in the morning is counted one day further into each cycle
+than someone born in the afternoon of the same date.
 
 `UTCmidnight(date)` is built from the **local calendar components** of a date (year, month,
 day) reinterpreted as UTC midnight, not from a local midnight timestamp. This detail matters:
@@ -62,17 +69,18 @@ date), and the modulo of a negative number is not guaranteed to land in `1..N` w
 ## Phase distribution
 
 The three cycles — Physical, Psychical/emotional, Intellectual — each have their own length and
-their own phase boundaries. This table is the canonical distribution of the four states across
-each cycle:
+their own phase boundaries. **Day 1 of every cycle is the zero day**: at the moment of birth,
+all three cycles start together at day 1. This table is the canonical distribution of the four
+states across each cycle, in chronological order:
 
-| Cycle | length | + (high) | X (critical) | − (low) | 0 (zero) |
+| Cycle | length | 0 (zero) | + (high) | X (critical) | − (low) |
 |---|---|---|---|---|---|
-| Physical (F) | 23 | 1–10 | 11 | 12–21 | 22–23 |
-| Psychical/emotional (P) | 28 | 1–12 | **13–14 (two!)** | 15–26 | 27–28 |
-| Intellectual (I) | 33 | 1–15 | 16 | 17–31 | 32–33 |
+| Physical (F) | 23 | 1 | 2–11 | 12 | 13–23 |
+| Psychical/emotional (P) | 28 | 1 | 2–13 | **14–15 (two!)** | 16–28 |
+| Intellectual (I) | 33 | 1 | 2–16 | 17 | 18–33 |
 
 The Physical and Intellectual cycles each have a single critical day. The **Psychical/emotional
-(P) cycle is the exception: it has two critical days, 13 and 14** — the transition from high to
+(P) cycle is the exception: it has two critical days, 14 and 15** — the transition from high to
 low takes two days in the emotional cycle rather than one. This is a distinguishing detail of
 the method, easy to miss if a symmetric one-critical-day assumption is copied across the F, P
 and I cycles without checking each cycle's own phase table.
@@ -85,32 +93,32 @@ The following is real, unmodified output of the reference engine (`src/engine.js
 
 ```json
 {
-  "daysAlive": 13195,
+  "daysAlive": 13197,
   "physical": {
     "symbol": "-",
-    "day": 16,
+    "day": 18,
     "length": 23,
-    "percent": 5
+    "percent": 9
   },
   "emotional": {
     "symbol": "+",
-    "day": 7,
+    "day": 9,
     "length": 28,
-    "percent": 88
+    "percent": 82
   },
   "intellectual": {
     "symbol": "-",
-    "day": 28,
+    "day": 30,
     "length": 33,
-    "percent": 29
+    "percent": 30
   }
 }
 ```
 
-Reading it: after 13,195 days lived, the Physical cycle is in its **low** phase (day 16 of 23,
-near the bottom of the trough — 5%), the Psychical/emotional cycle is **high** and close to its
-peak (day 7 of 28, 88%), and the Intellectual cycle is **low**, near the end of its trough and
-about to turn (day 28 of 33, 29%).
+Reading it: after 13,197 days lived, the Physical cycle is in its **low** phase (day 18 of 23,
+near the bottom of the trough — 9%), the Psychical/emotional cycle is **high** and past its
+peak (day 9 of 28, 82%), and the Intellectual cycle is **low**, past the middle of its trough
+and heading toward the turn (day 30 of 33, 30%).
 
 ## Visualization vs truth
 
@@ -133,18 +141,27 @@ decoration for the eye; it is not the method.
 BioMatch estimates how compatible two people's rhythms are on a given day. It is a separate,
 newer layer built on top of the same three cycles.
 
-**Input.** Each person's raw sine value for the day, for each cycle — `getRawBiorhythms(daysAlive)`,
-which returns three values in the range `[-1, 1]` (physical, emotional, intellectual).
+**Input.** Each person's total days lived — `calculateBioMatch(daysA, daysB)` takes the two raw
+`daysAlive` values (from `daysSinceBirth`), one per person, both evaluated on the same shared
+date.
 
-**Per-cycle sync.** For a given cycle, with raw values `rawA` and `rawB` for the two people:
+**Per-cycle sync.** This is dr. Sikora's own biopowinowactwo (biological affinity) formula: for
+each cycle of length `N`, the engine first finds each person's day-of-cycle (`getDayOfCycle(type,
+daysA)` and `getDayOfCycle(type, daysB)`), then folds their raw difference to the shorter arc
+around the cycle:
 
 ```
-sync = (1 − |rawA − rawB| / 2) × 100
+dayA = getDayOfCycle(type, daysA)
+dayB = getDayOfCycle(type, daysB)
+rawDiff = |dayA − dayB|
+foldedDiff = min(rawDiff, N − rawDiff)
+sync = (1 − foldedDiff / (N / 2)) × 100
 ```
 
-A sync of 100% means both people are at the exact same point in that cycle's phase; 0% means
-they are in exact opposition. Opposition is treated as **complementarity, not conflict** — two
-people at opposite points of a cycle balance rather than clash.
+A sync of 100% means both people are at the exact same day of that cycle's phase; 0% means they
+are at the furthest possible point apart in the cycle — the two ends of the folded arc. Maximum
+distance is treated as **complementarity, not conflict** — two people at opposite points of a
+cycle balance rather than clash.
 
 **Overall score.** The three per-cycle sync values are combined with fixed weights and rounded:
 
@@ -190,7 +207,7 @@ the point where a cycle's active phase gives way to its passive phase.
 
 **Why does the emotional cycle have two critical days?**
 Because the Psychical/emotional (P) cycle's phase distribution places the high-to-low
-transition across **two consecutive days, 13 and 14** (see "Phase distribution" above), rather
+transition across **two consecutive days, 14 and 15** (see "Phase distribution" above), rather
 than the single transition day used by the Physical and Intellectual cycles. This is a defined
 property of the method's phase table, not an approximation or a rounding artifact.
 

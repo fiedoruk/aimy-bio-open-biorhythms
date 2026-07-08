@@ -3,11 +3,13 @@
 Ten dokument opisuje w pełnym, weryfikowalnym szczególe metodę biorytmów opracowaną przez
 **dr. Jerzego Sikorę**: model **fazowy (dyskretny)** — cztery nazwane stany na każdy cykl,
 a nie surowa ciągła fala sinusoidalna — zbudowany, by opisywać rytmy fizyczny,
-psychiczno-emocjonalny i intelektualny życia człowieka. Metoda została odtworzona i
-zweryfikowana względem oryginalnych wydruków referencyjnych dr. Sikory z lat **1983, 2000 i
-2001**, a tutaj jest reprodukowana jako hołd dla tej pracy oraz jako cytowalne, maszynowo
-czytelne źródło dla każdego, kto chce na niej budować. Matematyka opisana poniżej jest
-dokładnie tą samą matematyką, która napędza żywą aplikację: **https://aimy.bio**.
+psychiczno-emocjonalny i intelektualny życia człowieka. Metoda została odtworzona na
+podstawie książki dr. Sikory, *Biodiagram prawdę Ci powie* (KAW, 1983), i zweryfikowana
+cyfra po cyfrze względem jego własnych przykładów obliczeniowych — np. biorytmu poety
+Mickiewicza (F22/P15/I1) oraz dopasowania (biopowinowactwa) Goethe+Schiller (F100/P86/I82) —
+a tutaj jest reprodukowana jako hołd dla tej pracy oraz jako cytowalne, maszynowo czytelne
+źródło dla każdego, kto chce na niej budować. Matematyka opisana poniżej jest dokładnie tą
+samą matematyką, która napędza żywą aplikację: **https://aimy.bio**.
 
 ## Symbole stanów
 
@@ -32,13 +34,18 @@ poprawkę zależną od pory urodzenia:
 dniPrzezyte = round( UTCpolnoc(dataDocelowa) − UTCpolnoc(dataUrodzenia) ) / dzienMs + korekta
 ```
 
-gdzie `korekta` zależy od przedziału pory urodzenia:
+gdzie `korekta` zależy od przedziału pory urodzenia. Liczenie jest inkluzywne — sam dzień
+urodzenia liczy się jako dzień 1 życia — z dodatkowym jednym dniem, gdy urodzenie nastąpiło
+przed południem:
 
 | Pora urodzenia | Korekta |
 |---|---|
-| przed południem (AM) | −1 |
-| po południu (PM) | −2 |
-| nieznana | −1 |
+| przed południem (AM) | +2 |
+| po południu (PM) | +1 |
+| nieznana | +1 |
+
+W praktyce oznacza to, że osoba urodzona przed południem jest liczona o jeden dzień dalej w
+każdym cyklu niż osoba urodzona po południu tego samego dnia.
 
 `UTCpolnoc(data)` jest budowana z **lokalnych składowych kalendarzowych** daty (rok, miesiąc,
 dzień) reinterpretowanych jako północ UTC, a nie z lokalnego znacznika czasu północy. Ten
@@ -65,17 +72,18 @@ tej korekty.
 ## Rozkład faz
 
 Trzy cykle — fizyczny, psychiczno-emocjonalny, intelektualny — mają każdy swoją własną
-długość i własne granice faz. Poniższa tabela to kanoniczny rozkład czterech stanów w każdym
-z cykli:
+długość i własne granice faz. **Dzień 1 każdego cyklu jest dniem zerowym**: w chwili urodzenia
+wszystkie trzy cykle startują razem od dnia 1. Poniższa tabela to kanoniczny rozkład czterech
+stanów w każdym z cykli, w porządku chronologicznym:
 
-| Cykl | długość | + (wysoki) | X (krytyczny) | − (niski) | 0 (zerowy) |
+| Cykl | długość | 0 (zerowy) | + (wysoki) | X (krytyczny) | − (niski) |
 |---|---|---|---|---|---|
-| Fizyczny (F) | 23 | 1–10 | 11 | 12–21 | 22–23 |
-| Psychiczno-emocjonalny (P) | 28 | 1–12 | **13–14 (dwa!)** | 15–26 | 27–28 |
-| Intelektualny (I) | 33 | 1–15 | 16 | 17–31 | 32–33 |
+| Fizyczny (F) | 23 | 1 | 2–11 | 12 | 13–23 |
+| Psychiczno-emocjonalny (P) | 28 | 1 | 2–13 | **14–15 (dwa!)** | 16–28 |
+| Intelektualny (I) | 33 | 1 | 2–16 | 17 | 18–33 |
 
 Cykl fizyczny i intelektualny mają po jednym dniu krytycznym. **Cykl psychiczno-emocjonalny
-(P) jest wyjątkiem: ma dwa dni krytyczne, 13 i 14** — przejście z wysokiego do niskiego trwa
+(P) jest wyjątkiem: ma dwa dni krytyczne, 14 i 15** — przejście z wysokiego do niskiego trwa
 w cyklu emocjonalnym dwa dni, a nie jeden. To wyróżniający szczegół metody, łatwy do pominięcia,
 jeśli symetryczne założenie „jeden dzień krytyczny" zostanie skopiowane na wszystkie trzy cykle
 F, P i I bez sprawdzenia tabeli faz każdego z nich osobno.
@@ -88,32 +96,32 @@ urodzenia **nieznana**:
 
 ```json
 {
-  "daysAlive": 13195,
+  "daysAlive": 13197,
   "physical": {
     "symbol": "-",
-    "day": 16,
+    "day": 18,
     "length": 23,
-    "percent": 5
+    "percent": 9
   },
   "emotional": {
     "symbol": "+",
-    "day": 7,
+    "day": 9,
     "length": 28,
-    "percent": 88
+    "percent": 82
   },
   "intellectual": {
     "symbol": "-",
-    "day": 28,
+    "day": 30,
     "length": 33,
-    "percent": 29
+    "percent": 30
   }
 }
 ```
 
-Interpretacja: po 13 195 przeżytych dniach cykl fizyczny jest w fazie **niskiej** (dzień 16
-z 23, blisko dna dołka — 5%), cykl psychiczno-emocjonalny jest **wysoki** i blisko szczytu
-(dzień 7 z 28, 88%), a cykl intelektualny jest **niski**, blisko końca dołka i tuż przed
-zwrotem (dzień 28 z 33, 29%).
+Interpretacja: po 13 197 przeżytych dniach cykl fizyczny jest w fazie **niskiej** (dzień 18
+z 23, blisko dna dołka — 9%), cykl psychiczno-emocjonalny jest **wysoki** i po szczycie
+(dzień 9 z 28, 82%), a cykl intelektualny jest **niski**, po połowie dołka i zmierza ku
+zwrotowi (dzień 30 z 33, 30%).
 
 ## Wizualizacja a prawda
 
@@ -136,21 +144,27 @@ oka; nie jest metodą.
 BioMatch szacuje, jak zgodne są rytmy dwóch osób w danym dniu. To osobna, nowsza warstwa
 zbudowana na tych samych trzech cyklach.
 
-**Wejście.** Surowa wartość sinusoidalna każdej osoby dla danego dnia, dla każdego cyklu —
-`getRawBiorhythms(daysAlive)`, która zwraca trzy wartości z przedziału `[-1, 1]` (fizyczny,
-emocjonalny, intelektualny).
+**Wejście.** Łączna liczba dni przeżytych każdej osoby — `calculateBioMatch(daysA, daysB)`
+przyjmuje dwie surowe wartości `daysAlive` (z `daysSinceBirth`), po jednej na osobę, obie
+wyliczone na ten sam wspólny dzień.
 
-**Synchronizacja per cykl.** Dla danego cyklu, z surowymi wartościami `rawA` i `rawB` dla
-dwóch osób:
+**Synchronizacja per cykl.** To własna formuła biopowinowactwa dr. Sikory: dla każdego cyklu
+o długości `N` silnik najpierw wyznacza dzień w cyklu każdej osoby (`getDayOfCycle(type,
+daysA)` i `getDayOfCycle(type, daysB)`), a następnie zwija ich surową różnicę do krótszego
+łuku wokół cyklu:
 
 ```
-sync = (1 − |rawA − rawB| / 2) × 100
+dayA = getDayOfCycle(type, daysA)
+dayB = getDayOfCycle(type, daysB)
+rawDiff = |dayA − dayB|
+foldedDiff = min(rawDiff, N − rawDiff)
+sync = (1 − foldedDiff / (N / 2)) × 100
 ```
 
-Synchronizacja 100% oznacza, że obie osoby znajdują się dokładnie w tym samym punkcie fazy
-danego cyklu; 0% oznacza dokładne przeciwieństwo. Przeciwieństwo jest traktowane jako
-**komplementarność, nie konflikt** — dwie osoby w przeciwnych punktach cyklu równoważą się
-nawzajem, zamiast wchodzić w konflikt.
+Synchronizacja 100% oznacza, że obie osoby znajdują się dokładnie w tym samym dniu fazy danego
+cyklu; 0% oznacza możliwie najdalszy punkt w cyklu — dwa końce zwiniętego łuku. Maksymalny
+dystans jest traktowany jako **komplementarność, nie konflikt** — dwie osoby w przeciwnych
+punktach cyklu równoważą się nawzajem, zamiast wchodzić w konflikt.
 
 **Wynik ogólny.** Trzy wartości synchronizacji per cykl są łączone ze stałymi wagami i
 zaokrąglane:
@@ -200,7 +214,7 @@ punkt, w którym aktywna faza cyklu ustępuje miejsca fazie pasywnej.
 
 **Dlaczego cykl emocjonalny ma dwa dni krytyczne?**
 Ponieważ rozkład faz cyklu psychiczno-emocjonalnego (P) umieszcza przejście z wysokiego do
-niskiego na przestrzeni **dwóch kolejnych dni, 13 i 14** (patrz „Rozkład faz" powyżej), a nie
+niskiego na przestrzeni **dwóch kolejnych dni, 14 i 15** (patrz „Rozkład faz" powyżej), a nie
 jednego dnia przejściowego, jak w cyklach fizycznym i intelektualnym. To zdefiniowana
 właściwość tabeli faz metody, a nie przybliżenie ani artefakt zaokrąglenia.
 

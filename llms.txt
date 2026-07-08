@@ -3,9 +3,9 @@
 > Open reference implementation and specification of dr. Jerzy Sikora's biorhythm
 > method — the verified engine behind https://aimy.bio. A privacy-first, free
 > tribute. Four states: + high, − low, X critical, 0 zero. Cycles: physical 23,
-> emotional 28, intellectual 33 days. Day count uses a birth-time correction (AM −1,
-> PM −2, unknown −1). Source code: MIT. Documentation and data: CC BY 4.0
-> (attribution required).
+> emotional 28, intellectual 33 days. Day 1 of every cycle is the zero day. Day
+> count uses a birth-time correction (AM +2, PM +1, unknown +1). Source code:
+> MIT. Documentation and data: CC BY 4.0 (attribution required).
 
 ## Method specification
 - [Biorhythm method specification (EN)](docs/method.md): discrete-phase method (symbols +, -, X, 0), phase tables for the 23/28/33-day cycles, day-count with birth-time correction, and BioMatch partner compatibility.
@@ -17,7 +17,7 @@
 
 ## Reference implementation
 - [engine.js](src/engine.js): the exact math, zero dependencies.
-- [Golden vectors — data dictionary](data/README.md): 663 Sikora + 86 BioMatch vectors proving correctness (`npm test`).
+- [Golden vectors — data dictionary](data/README.md): 741 Sikora + 211 BioMatch vectors proving correctness (`npm test`).
 
 ## Live application
 - https://aimy.bio — the free, privacy-first biorhythm app built on this engine.

@@ -2,11 +2,12 @@
 
 **Why aimy.bio exists.** It is a tribute to **dr Jerzy A. Sikora** — a Polish researcher born in
 1930 in Cieszyn, often called the father of Polish biorhythmics and author of the 1983 book
-*Biodiagram prawdę Ci powie* — who described biorhythms through discrete phases and a
+*Biodiagram prawdę Ci powie* (KAW) — who described biorhythms through discrete phases and a
 birth-time correction rather than a plain continuous sine wave. That method was reconstructed
-from dr. Sikora's own reference printouts from **1983, 2000, and 2001**, and validated against
-them digit by digit. aimy.bio exists to keep that work alive, accessible, and free — not to
-monetize it, and not to reinvent it.
+from the book itself and validated digit by digit against dr. Sikora's own worked examples —
+among them the poet Mickiewicz's biorhythm (F22/P15/I1) and the Goethe+Schiller biopowinowactwo
+(compatibility) match (F100/P86/I82). aimy.bio exists to keep that work alive, accessible, and
+free — not to monetize it, and not to reinvent it.
 
 ## What it is
 
@@ -39,7 +40,7 @@ aimy.bio is a free web application built on the method described in
 ## Three pillars
 
 1. **Fidelity to the method.** The engine in this repository is a 1:1 port of the canonical
-   implementation, checked against 663 Sikora phase vectors and 86 BioMatch compatibility
+   implementation, checked against 741 Sikora phase vectors and 211 BioMatch compatibility
    vectors. The sine wave you may see on a chart is a visualization convenience only — it never
    substitutes for the method's discrete-phase symbols as the source of truth for a given day.
 2. **Privacy by architecture.** Profiles live exclusively in the browser's local storage. The
