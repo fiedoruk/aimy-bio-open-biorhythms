@@ -5,6 +5,7 @@
 
 **Status:** ZAREJESTROWANA publicznie 2026-07-08 (Faza 0), PRZED zebraniem jakichkolwiek danych.
 Plan analizy jest od tej chwili WIĄŻĄCY (zero p-hackingu) — korekta po fakcie zniszczyłaby wartość pre-rejestracji.
+*Sprostowanie 2026-07-08 (przed zebraniem danych): doprecyzowano status Fazy 2 (opt-in dostępny, nie „dormant") i sformułowanie o wieku (nota „dla dorosłych" jest w opt-inie apki) — bez zmian hipotez i planu analizy.*
 
 ## 1. Tło i cel
 
@@ -44,7 +45,7 @@ metodą oddolną, anonimową, z góry zarejestrowaną. **Hipoteza domyślna = br
   (≥1000 permutacji) i budujemy rozkład „efektu losowego"; realny efekt porównujemy do tego rozkładu.
 - **N-of-1 + meta:** najpierw statystyka w obrębie osoby (każde urządzenie liczy własną), potem
   meta-analiza rozkładu efektów między osobami (patrz §5 — edge analytics).
-- **Kryteria włączenia (z góry):** wiek ≥ 18 lat (wymóg protokołu; samodeklaracja pełnoletności przy aktywacji zbierania Fazy 2); min. 30 dni
+- **Kryteria włączenia (z góry):** przeznaczone dla osób dorosłych (opt-in Fazy 2 zawiera notę „tylko dla dorosłych"; wieku ani tożsamości nie zbieramy — badanie anonimowe); min. 30 dni
   z oceną na osobę; wykluczenie „stałej oceny" (np. ta sama liczba ≥95% dni — brak wariancji);
   wykluczenie < 1 pełnego cyklu (33 dni).
 
@@ -83,8 +84,9 @@ metodą oddolną, anonimową, z góry zarejestrowaną. **Hipoteza domyślna = br
 
 ## 8. Etyka / RODO
 
-- Wyłącznie osoby pełnoletnie — wymóg protokołu; samodeklaracja pełnoletności zostanie dodana przy
-  opt-in wraz z aktywacją zbierania Fazy 2 (dziś dormant — patrz §11.1). Jasna informacja przed zgodą. **Do transmisji nie trafiają żadne surowe oceny ani dane o samopoczuciu — wyłącznie
+- Badanie przeznaczone dla osób dorosłych — opt-in Fazy 2 („udostępnij anonimowo") zawiera notę
+  „tylko dla dorosłych", więc włączając udostępnianie użytkownik potwierdza pełnoletność; wieku ani
+  tożsamości nie zbieramy. Jasna informacja przed zgodą. **Do transmisji nie trafiają żadne surowe oceny ani dane o samopoczuciu — wyłącznie
   zagregowane współczynniki korelacji, które nie stanowią danych o zdrowiu.** Surowe samooceny (mogące
   być traktowane jako dane o stanie samopoczucia w rozumieniu art. 9 RODO) **pozostają wyłącznie na
   urządzeniu** i nie są przez nas przetwarzane. Charakter narzędzia jest **wellness/autorefleksyjny,
@@ -125,8 +127,8 @@ Po recenzji Legal (przed Fazą 2) → publiczna pre-rejestracja z timestampem (O
 
 Zamrożone PRZED zbieraniem danych — korekta po fakcie zniszczyłaby wartość pre-rejestracji.
 
-1. **Kryterium przejścia Faza 1 → Faza 2 (zbieranie agregatu ma sens):** Faza 2 pozostaje DORMANT
-   (`RESEARCH_ENDPOINT=null` w kliencie) dopóki nie ma podstaw, że zbiorą się dane meta-analityczne.
+1. **Kryterium przejścia Faza 1 → Faza 2 (zbieranie agregatu ma sens):** zbieranie Fazy 2 rusza
+   wyłącznie na świadomy podwójny opt-in użytkownika (domyślnie OFF; dostępny kill-switch `RESEARCH_ENDPOINT=null` do natychmiastowego wyłączenia).
    Próg orientacyjny do **realnej analizy** (Faza 3): **≥ 50 niezależnych zgłoszeń** na kamieniu
    milowym (most pierwszy: 30 dni). Poniżej — dane traktujemy jako pilotaż, nie publikujemy wniosków.
 2. **Moc statystyczna a długość (uczciwość N-of-1):** 30 dni = ~1 cykl fizyczny (23) i <1 emocjonalny

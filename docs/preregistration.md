@@ -6,6 +6,7 @@
 
 **Status:** PUBLICLY REGISTERED 2026-07-08 (Phase 0), BEFORE any data collection. From this point the
 analysis plan is BINDING (no p-hacking) — amending it after the fact would destroy the value of the pre-registration.
+*Correction 2026-07-08 (before any data collection): clarified the Phase 2 status (opt-in available, not "dormant") and the wording on age (the "adults only" notice is in the app's opt-in) — no change to the hypotheses or analysis plan.*
 
 ## 1. Background and goal
 
@@ -44,8 +45,8 @@ relationship between cycle phase and self-rated state — bottom-up, anonymous, 
   and build a "random-effect" distribution; the real effect is compared to that distribution.
 - **N-of-1 + meta:** first the within-person statistic (each device computes its own), then a meta-analysis
   of the distribution of effects across people (see §5 — edge analytics).
-- **Inclusion criteria (pre-set):** age ≥ 18 (protocol requirement; self-declaration when Phase 2 collection
-  is activated); min. 30 days with a rating per person; exclusion of "constant rating" (e.g. the same number
+- **Inclusion criteria (pre-set):** for adults (the Phase 2 opt-in carries an "adults only" notice; we collect
+  neither age nor identity — the study is anonymous); min. 30 days with a rating per person; exclusion of "constant rating" (e.g. the same number
   on ≥95% of days — no variance); exclusion of < 1 full cycle (33 days).
 
 ## 5. Data and privacy (anonymous by design)
@@ -83,8 +84,8 @@ relationship between cycle phase and self-rated state — bottom-up, anonymous, 
 
 ## 8. Ethics / GDPR
 
-- Adults only — a protocol requirement; a self-declaration of adulthood will be added at opt-in together with
-  the activation of Phase 2 collection (currently dormant — see §11.1). Clear information before consent.
+- The study is intended for adults — the Phase 2 opt-in ("Share anonymously") carries an "adults only" notice,
+  so by enabling sharing the user confirms adulthood; we collect neither age nor identity. Clear information before consent.
   **No raw ratings or well-being data enter the transmission — only aggregated correlation coefficients,
   which do not constitute health data.** Raw self-ratings (which could be treated as data on one's well-being
   state under Art. 9 GDPR) **remain solely on the device** and are not processed by us. The nature of the tool
@@ -124,8 +125,8 @@ Resolved in advance according to best research practice:
 
 Frozen BEFORE data collection — amending after the fact would destroy the value of the pre-registration.
 
-1. **Phase 1 → Phase 2 transition criterion (collecting the aggregate makes sense):** Phase 2 stays DORMANT
-   (`RESEARCH_ENDPOINT` disabled in the client) until there are grounds that meta-analytic data will accrue.
+1. **Phase 1 → Phase 2 transition criterion (collecting the aggregate makes sense):** Phase 2 collection
+   starts only on the user's deliberate double opt-in (off by default; a kill-switch `RESEARCH_ENDPOINT` = null is available for immediate disabling).
    Orientation threshold for **real analysis** (Phase 3): **≥ 50 independent submissions** at a milestone
    (first bridge: 30 days). Below — we treat the data as a pilot and do not publish conclusions.
 2. **Statistical power vs length (N-of-1 honesty):** 30 days = ~1 physical cycle (23) and <1 emotional (28).
