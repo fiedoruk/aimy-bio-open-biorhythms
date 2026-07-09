@@ -1,6 +1,10 @@
 # Changelog
 
-## Unreleased — 2026-07-08
+## 2.0.0 — 2026-07-08
+**Breaking:** biorhythm and BioMatch outputs change versus 1.0.0 — the engine now matches
+Dr. Sikora's 1983 source book (phase table, birth-time convention, BioMatch formula). Recompute
+any values cached from 1.0.0.
+
 Engine corrected to match Dr. Sikora's 1983 source book (phase table, birth-time convention,
 BioMatch = his biopowinowactwo formula); validated against his own worked examples.
 
