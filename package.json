@@ -7,7 +7,7 @@
   "homepage": "https://aimy.bio",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fiedoruk/aimy-bio-open-biorhythms"
+    "url": "git+https://github.com/fiedoruk/aimy-bio-open-biorhythms.git"
   },
   "bin": {
     "aimy-biorhythm": "bin/cli.mjs"
