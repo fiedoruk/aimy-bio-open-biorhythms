@@ -1,5 +1,20 @@
 # Changelog
 
+## 2.1.0 — 2026-07-11
+MCP server for AI assistants — engine and golden vectors unchanged.
+
+- New `aimy-bio-mcp` bin (`bin/mcp.mjs`): a zero-dependency stdio server implementing the
+  Model Context Protocol (JSON-RPC 2.0, protocol `2024-11-05`), so AI assistants can compute
+  dr. Sikora's method instead of guessing. Dates are processed in flight; nothing is stored,
+  logged, or transmitted.
+- Tools: `biorhythm_for_date` (full state for any date), `critical_days` (upcoming critical
+  transitions and strong-phase starts), `biomatch` (two-person biopowinowactwo compatibility).
+- Install for Claude Code:
+  `claude mcp add biorhythms -- npx -y --package=aimy-bio-open-biorhythms@latest aimy-bio-mcp`
+  (see README, "Use with AI assistants (MCP)").
+- `npm test` now also runs the MCP conformance suite (`bin/mcp.test.mjs`) — every tool result is
+  checked against the engine itself, including the Goethe+Schiller source-book anchor.
+
 ## 2.0.0 — 2026-07-08
 **Breaking:** biorhythm and BioMatch outputs change versus 1.0.0 — the engine now matches
 Dr. Sikora's 1983 source book (phase table, birth-time convention, BioMatch formula). Recompute

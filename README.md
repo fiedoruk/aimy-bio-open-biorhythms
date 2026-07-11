@@ -59,6 +59,38 @@ import { getBiorhythmsFor } from 'aimy-bio-open-biorhythms';
 console.log(getBiorhythmsFor(new Date(1990, 4, 15), new Date()));
 ```
 
+## Use with AI assistants (MCP)
+
+The package also ships a zero-dependency [MCP](https://modelcontextprotocol.io) server
+(`aimy-bio-mcp`), so AI assistants can actually *compute* dr. Sikora's method instead of
+hallucinating generic sine waves. Zero PII by design: dates are processed in flight — nothing is
+stored, logged, or sent anywhere.
+
+Claude Code — one command:
+
+```bash
+claude mcp add biorhythms -- npx -y --package=aimy-bio-open-biorhythms@latest aimy-bio-mcp
+```
+
+Claude Desktop (or any MCP client) — `claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "biorhythms": {
+      "command": "npx",
+      "args": ["-y", "--package=aimy-bio-open-biorhythms@latest", "aimy-bio-mcp"]
+    }
+  }
+}
+```
+
+(Note the `--package=` form — plain `npx aimy-bio-open-biorhythms` runs the default CLI bin, not
+the MCP server.)
+
+Tools: `biorhythm_for_date` (full state for any date) · `critical_days` (upcoming critical
+transitions and strong-phase starts) · `biomatch` (two-person compatibility, biopowinowactwo).
+
 ## The method in 30 seconds
 
 Every day, in every cycle, is classified into exactly one of four states:
